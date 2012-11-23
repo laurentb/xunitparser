@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite name="nosetests" tests="104" errors="2" failures="1" skip="63"><testcase classname="arte.test.ArteTest" name="test_latest" time="0.003"><skipped type="unittest.case.SkipTest" message='No backends configured for this module.&#10;-------------------- &gt;&gt; begin captured logging &lt;&lt; --------------------&#10;modules: DEBUG: Loaded module "bouygues" from /home/bb-weboob/buildslave/penguin/build/modules/bouygues&#10;modules: DEBUG: Loaded module "canalplus" from /home/bb-weboob/buildslave/penguin/build/modules/canalplus&#10;backend: DEBUG: Created backend instance "canalplus" for backend "canalplus"&#10;modules: DEBUG: Loaded module "canalplus" from /home/bb-weboob/buildslave/penguin/build/modules/canalplus&#10;backend: DEBUG: Created backend instance "canalplus" for backend "canalplus"&#10;modules: DEBUG: Loaded module "canaltp" from /home/bb-weboob/buildslave/penguin/build/modules/canaltp&#10;backend: DEBUG: Created backend instance "canaltp" for backend "canaltp"&#10;modules: DEBUG: Loaded module "cappedtv" from /home/bb-weboob/buildslave/penguin/build/modules/cappedtv&#10;backend: DEBUG: Created backend instance "cappedtv" for backend "cappedtv"&#10;modules: DEBUG: Loaded module "cappedtv" from /home/bb-weboob/buildslave/penguin/build/modules/cappedtv&#10;backend: DEBUG: Created backend instance "cappedtv" for backend "cappedtv"&#10;modules: DEBUG: Loaded module "dailymotion" from /home/bb-weboob/buildslave/penguin/build/modules/dailymotion&#10;backend: DEBUG: Created backend instance "dailymotion" for backend "dailymotion"&#10;modules: DEBUG: Loaded module "dailymotion" from /home/bb-weboob/buildslave/penguin/build/modules/dailymotion&#10;backend: DEBUG: Created backend instance "dailymotion" for backend "dailymotion"&#10;modules: DEBUG: Loaded module "ecrans" from /home/bb-weboob/buildslave/penguin/build/modules/ecrans&#10;backend: DEBUG: Created backend instance "ecrans" for backend "ecrans"&#10;modules: DEBUG: Loaded module "ehentai" from /home/bb-weboob/buildslave/penguin/build/modules/ehentai&#10;modules: DEBUG: Loaded module "ehentai" from /home/bb-weboob/buildslave/penguin/build/modules/ehentai&#10;modules: DEBUG: Loaded module "fourchan" from /home/bb-weboob/buildslave/penguin/build/modules/fourchan&#10;modules: DEBUG: Loaded module "geolocip" from /home/bb-weboob/buildslave/penguin/build/modules/geolocip&#10;backend: DEBUG: Created backend instance "geolocip" for backend "geolocip"&#10;modules: DEBUG: Loaded module "ina" from /home/bb-weboob/buildslave/penguin/build/modules/ina&#10;backend: DEBUG: Created backend instance "ina" for backend "ina"&#10;modules: DEBUG: Loaded module "inrocks" from /home/bb-weboob/buildslave/penguin/build/modules/inrocks&#10;backend: DEBUG: Created backend instance "inrocks" for backend "inrocks"&#10;modules: DEBUG: Loaded module "ipinfodb" from /home/bb-weboob/buildslave/penguin/build/modules/ipinfodb&#10;backend: DEBUG: Created backend instance "ipinfodb" for backend "ipinfodb"&#10;modules: DEBUG: Loaded module "isohunt" from /home/bb-weboob/buildslave/penguin/build/modules/isohunt&#10;backend: DEBUG: Created backend instance "isohunt" for backend "isohunt"&#10;modules: DEBUG: Loaded module "kickass" from /home/bb-weboob/buildslave/penguin/build/modules/kickass&#10;backend: DEBUG: Created backend instance "kickass" for backend "kickass"&#10;modules: DEBUG: Loaded module "lefigaro" from /home/bb-weboob/buildslave/penguin/build/modules/lefigaro&#10;backend: DEBUG: Created backend instance "lefigaro" for backend "lefigaro"&#10;modules: DEBUG: Loaded module "lefigaro" from /home/bb-weboob/buildslave/penguin/build/modules/lefigaro&#10;backend: DEBUG: Created backend instance "lefigaro" for backend "lefigaro"&#10;modules: DEBUG: Loaded module "meteofrance" from /home/bb-weboob/buildslave/penguin/build/modules/meteofrance&#10;backend: DEBUG: Created backend instance "meteofrance" for backend "meteofrance"&#10;modules: DEBUG: Loaded module "minutes20" from /home/bb-weboob/buildslave/penguin/build/modules/minutes20&#10;backend: DEBUG: Created backend instance "minutes20" for backend "minutes20"&#10;modules: DEBUG: Loaded module "newsfeed" from /home/bb-weboob/buildslave/penguin/build/modules/newsfeed&#10;backend: DEBUG: Created backend instance "slashdot_rss" for backend "newsfeed"&#10;backend: DEBUG: Created backend instance "linuxfr_atom" for backend "newsfeed"&#10;modules: DEBUG: Loaded module "ouifm" from /home/bb-weboob/buildslave/penguin/build/modules/ouifm&#10;backend: DEBUG: Created backend instance "ouifm" for backend "ouifm"&#10;modules: DEBUG: Loaded module "pastealacon" from /home/bb-weboob/buildslave/penguin/build/modules/pastealacon&#10;backend: DEBUG: Created backend instance "pastealacon" for backend "pastealacon"&#10;modules: DEBUG: Loaded module "pastealacon" from /home/bb-weboob/buildslave/penguin/build/modules/pastealacon&#10;backend: DEBUG: Created backend instance "pastealacon" for backend "pastealacon"&#10;modules: DEBUG: Loaded module "pastealacon" from /home/bb-weboob/buildslave/penguin/build/modules/pastealacon&#10;backend: DEBUG: Created backend instance "pastealacon" for backend "pastealacon"&#10;modules: DEBUG: Loaded module "pastealacon" from /home/bb-weboob/buildslave/penguin/build/modules/pastealacon&#10;backend: DEBUG: Created backend instance "pastealacon" for backend "pastealacon"&#10;modules: DEBUG: Loaded module "pastealacon" from /home/bb-weboob/buildslave/penguin/build/modules/pastealacon&#10;backend: DEBUG: Created backend instance "pastealacon" for backend "pastealacon"&#10;modules: DEBUG: Loaded module "pastebin" from /home/bb-weboob/buildslave/penguin/build/modules/pastebin&#10;backend: DEBUG: Created backend instance "pastebin_loggedin_api" for backend "pastebin"&#10;backend: DEBUG: Created backend instance "pastebin_loggedin" for backend "pastebin"&#10;backend: DEBUG: Created backend instance "pastebin_nologin_api" for backend "pastebin"&#10;backend: DEBUG: Created backend instance "pastebin_nologin" for backend "pastebin"&#10;modules: DEBUG: Loaded module "pastebin" from /home/bb-weboob/buildslave/penguin/build/modules/pastebin&#10;backend: DEBUG: Created backend instance "pastebin_loggedin_api" for backend "pastebin"&#10;backend: DEBUG: Created backend instance "pastebin_loggedin" for backend "pastebin"&#10;backend: DEBUG: Created backend instance "pastebin_nologin_api" for backend "pastebin"&#10;backend: DEBUG: Created backend instance "pastebin_nologin" for backend "pastebin"&#10;modules: DEBUG: Loaded module "pastebin" from /home/bb-weboob/buildslave/penguin/build/modules/pastebin&#10;backend: DEBUG: Created backend instance "pastebin_loggedin_api" for backend "pastebin"&#10;backend: DEBUG: Created backend instance "pastebin_loggedin" for backend "pastebin"&#10;backend: DEBUG: Created backend instance "pastebin_nologin_api" for backend "pastebin"&#10;backend: DEBUG: Created backend instance "pastebin_nologin" for backend "pastebin"&#10;modules: DEBUG: Loaded module "pastebin" from /home/bb-weboob/buildslave/penguin/build/modules/pastebin&#10;backend: DEBUG: Created backend instance "pastebin_loggedin_api" for backend "pastebin"&#10;backend: DEBUG: Created backend instance "pastebin_loggedin" for backend "pastebin"&#10;backend: DEBUG: Created backend instance "pastebin_nologin_api" for backend "pastebin"&#10;backend: DEBUG: Created backend instance "pastebin_nologin" for backend "pastebin"&#10;modules: DEBUG: Loaded module "pastebin" from /home/bb-weboob/buildslave/penguin/build/modules/pastebin&#10;backend: DEBUG: Created backend instance "pastebin_loggedin_api" for backend "pastebin"&#10;backend: DEBUG: Created backend instance "pastebin_loggedin" for backend "pastebin"&#10;backend: DEBUG: Created backend instance "pastebin_nologin_api" for backend "pastebin"&#10;backend: DEBUG: Created backend instance "pastebin_nologin" for backend "pastebin"&#10;modules: DEBUG: Loaded module "pastebin" from /home/bb-weboob/buildslave/penguin/build/modules/pastebin&#10;backend: DEBUG: Created backend instance "pastebin_loggedin_api" for backend "pastebin"&#10;backend: DEBUG: Created backend instance "pastebin_loggedin" for backend "pastebin"&#10;backend: DEBUG: Created backend instance "pastebin_nologin_api" for backend "pastebin"&#10;backend: DEBUG: Created backend instance "pastebin_nologin" for backend "pastebin"&#10;modules: DEBUG: Loaded module "piratebay" from /home/bb-weboob/buildslave/penguin/build/modules/piratebay&#10;backend: DEBUG: Created backend instance "piratebay" for backend "piratebay"&#10;modules: DEBUG: Loaded module "radiofrance" from /home/bb-weboob/buildslave/penguin/build/modules/radiofrance&#10;backend: DEBUG: Created backend instance "radiofrance" for backend "radiofrance"&#10;modules: DEBUG: Loaded module "radiofrance" from /home/bb-weboob/buildslave/penguin/build/modules/radiofrance&#10;backend: DEBUG: Created backend instance "radiofrance" for backend "radiofrance"&#10;modules: DEBUG: Loaded module "yahoo" from /home/bb-weboob/buildslave/penguin/build/modules/yahoo&#10;backend: DEBUG: Created backend instance "yahoo" for backend "yahoo"&#10;modules: DEBUG: Loaded module "youjizz" from /home/bb-weboob/buildslave/penguin/build/modules/youjizz&#10;backend: DEBUG: Created backend instance "youjizz" for backend "youjizz"&#10;modules: DEBUG: Loaded module "youjizz" from /home/bb-weboob/buildslave/penguin/build/modules/youjizz&#10;backend: DEBUG: Created backend instance "youjizz" for backend "youjizz"&#10;modules: DEBUG: Loaded module "youporn" from /home/bb-weboob/buildslave/penguin/build/modules/youporn&#10;backend: DEBUG: Created backend instance "youporn" for backend "youporn"&#10;modules: DEBUG: Loaded module "youporn" from /home/bb-weboob/buildslave/penguin/build/modules/youporn&#10;backend: DEBUG: Created backend instance "youporn" for backend "youporn"&#10;modules: DEBUG: Loaded module "youtube" from /home/bb-weboob/buildslave/penguin/build/modules/youtube&#10;backend: DEBUG: Created backend instance "youtube" for backend "youtube"&#10;modules: DEBUG: Loaded module "youtube" from /home/bb-weboob/buildslave/penguin/build/modules/youtube&#10;backend: DEBUG: Created backend instance "youtube" for backend "youtube"&#10;--------------------- &gt;&gt; end captured logging &lt;&lt; ---------------------'><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+-------------------- >> begin captured logging << --------------------
+modules: DEBUG: Loaded module "bouygues" from /home/bb-weboob/buildslave/penguin/build/modules/bouygues
+modules: DEBUG: Loaded module "canalplus" from /home/bb-weboob/buildslave/penguin/build/modules/canalplus
+backend: DEBUG: Created backend instance "canalplus" for backend "canalplus"
+modules: DEBUG: Loaded module "canalplus" from /home/bb-weboob/buildslave/penguin/build/modules/canalplus
+backend: DEBUG: Created backend instance "canalplus" for backend "canalplus"
+modules: DEBUG: Loaded module "canaltp" from /home/bb-weboob/buildslave/penguin/build/modules/canaltp
+backend: DEBUG: Created backend instance "canaltp" for backend "canaltp"
+modules: DEBUG: Loaded module "cappedtv" from /home/bb-weboob/buildslave/penguin/build/modules/cappedtv
+backend: DEBUG: Created backend instance "cappedtv" for backend "cappedtv"
+modules: DEBUG: Loaded module "cappedtv" from /home/bb-weboob/buildslave/penguin/build/modules/cappedtv
+backend: DEBUG: Created backend instance "cappedtv" for backend "cappedtv"
+modules: DEBUG: Loaded module "dailymotion" from /home/bb-weboob/buildslave/penguin/build/modules/dailymotion
+backend: DEBUG: Created backend instance "dailymotion" for backend "dailymotion"
+modules: DEBUG: Loaded module "dailymotion" from /home/bb-weboob/buildslave/penguin/build/modules/dailymotion
+backend: DEBUG: Created backend instance "dailymotion" for backend "dailymotion"
+modules: DEBUG: Loaded module "ecrans" from /home/bb-weboob/buildslave/penguin/build/modules/ecrans
+backend: DEBUG: Created backend instance "ecrans" for backend "ecrans"
+modules: DEBUG: Loaded module "ehentai" from /home/bb-weboob/buildslave/penguin/build/modules/ehentai
+modules: DEBUG: Loaded module "ehentai" from /home/bb-weboob/buildslave/penguin/build/modules/ehentai
+modules: DEBUG: Loaded module "fourchan" from /home/bb-weboob/buildslave/penguin/build/modules/fourchan
+modules: DEBUG: Loaded module "geolocip" from /home/bb-weboob/buildslave/penguin/build/modules/geolocip
+backend: DEBUG: Created backend instance "geolocip" for backend "geolocip"
+modules: DEBUG: Loaded module "ina" from /home/bb-weboob/buildslave/penguin/build/modules/ina
+backend: DEBUG: Created backend instance "ina" for backend "ina"
+modules: DEBUG: Loaded module "inrocks" from /home/bb-weboob/buildslave/penguin/build/modules/inrocks
+backend: DEBUG: Created backend instance "inrocks" for backend "inrocks"
+modules: DEBUG: Loaded module "ipinfodb" from /home/bb-weboob/buildslave/penguin/build/modules/ipinfodb
+backend: DEBUG: Created backend instance "ipinfodb" for backend "ipinfodb"
+modules: DEBUG: Loaded module "isohunt" from /home/bb-weboob/buildslave/penguin/build/modules/isohunt
+backend: DEBUG: Created backend instance "isohunt" for backend "isohunt"
+modules: DEBUG: Loaded module "kickass" from /home/bb-weboob/buildslave/penguin/build/modules/kickass
+backend: DEBUG: Created backend instance "kickass" for backend "kickass"
+modules: DEBUG: Loaded module "lefigaro" from /home/bb-weboob/buildslave/penguin/build/modules/lefigaro
+backend: DEBUG: Created backend instance "lefigaro" for backend "lefigaro"
+modules: DEBUG: Loaded module "lefigaro" from /home/bb-weboob/buildslave/penguin/build/modules/lefigaro
+backend: DEBUG: Created backend instance "lefigaro" for backend "lefigaro"
+modules: DEBUG: Loaded module "meteofrance" from /home/bb-weboob/buildslave/penguin/build/modules/meteofrance
+backend: DEBUG: Created backend instance "meteofrance" for backend "meteofrance"
+modules: DEBUG: Loaded module "minutes20" from /home/bb-weboob/buildslave/penguin/build/modules/minutes20
+backend: DEBUG: Created backend instance "minutes20" for backend "minutes20"
+modules: DEBUG: Loaded module "newsfeed" from /home/bb-weboob/buildslave/penguin/build/modules/newsfeed
+backend: DEBUG: Created backend instance "slashdot_rss" for backend "newsfeed"
+backend: DEBUG: Created backend instance "linuxfr_atom" for backend "newsfeed"
+modules: DEBUG: Loaded module "ouifm" from /home/bb-weboob/buildslave/penguin/build/modules/ouifm
+backend: DEBUG: Created backend instance "ouifm" for backend "ouifm"
+modules: DEBUG: Loaded module "pastealacon" from /home/bb-weboob/buildslave/penguin/build/modules/pastealacon
+backend: DEBUG: Created backend instance "pastealacon" for backend "pastealacon"
+modules: DEBUG: Loaded module "pastealacon" from /home/bb-weboob/buildslave/penguin/build/modules/pastealacon
+backend: DEBUG: Created backend instance "pastealacon" for backend "pastealacon"
+modules: DEBUG: Loaded module "pastealacon" from /home/bb-weboob/buildslave/penguin/build/modules/pastealacon
+backend: DEBUG: Created backend instance "pastealacon" for backend "pastealacon"
+modules: DEBUG: Loaded module "pastealacon" from /home/bb-weboob/buildslave/penguin/build/modules/pastealacon
+backend: DEBUG: Created backend instance "pastealacon" for backend "pastealacon"
+modules: DEBUG: Loaded module "pastealacon" from /home/bb-weboob/buildslave/penguin/build/modules/pastealacon
+backend: DEBUG: Created backend instance "pastealacon" for backend "pastealacon"
+modules: DEBUG: Loaded module "pastebin" from /home/bb-weboob/buildslave/penguin/build/modules/pastebin
+backend: DEBUG: Created backend instance "pastebin_loggedin_api" for backend "pastebin"
+backend: DEBUG: Created backend instance "pastebin_loggedin" for backend "pastebin"
+backend: DEBUG: Created backend instance "pastebin_nologin_api" for backend "pastebin"
+backend: DEBUG: Created backend instance "pastebin_nologin" for backend "pastebin"
+modules: DEBUG: Loaded module "pastebin" from /home/bb-weboob/buildslave/penguin/build/modules/pastebin
+backend: DEBUG: Created backend instance "pastebin_loggedin_api" for backend "pastebin"
+backend: DEBUG: Created backend instance "pastebin_loggedin" for backend "pastebin"
+backend: DEBUG: Created backend instance "pastebin_nologin_api" for backend "pastebin"
+backend: DEBUG: Created backend instance "pastebin_nologin" for backend "pastebin"
+modules: DEBUG: Loaded module "pastebin" from /home/bb-weboob/buildslave/penguin/build/modules/pastebin
+backend: DEBUG: Created backend instance "pastebin_loggedin_api" for backend "pastebin"
+backend: DEBUG: Created backend instance "pastebin_loggedin" for backend "pastebin"
+backend: DEBUG: Created backend instance "pastebin_nologin_api" for backend "pastebin"
+backend: DEBUG: Created backend instance "pastebin_nologin" for backend "pastebin"
+modules: DEBUG: Loaded module "pastebin" from /home/bb-weboob/buildslave/penguin/build/modules/pastebin
+backend: DEBUG: Created backend instance "pastebin_loggedin_api" for backend "pastebin"
+backend: DEBUG: Created backend instance "pastebin_loggedin" for backend "pastebin"
+backend: DEBUG: Created backend instance "pastebin_nologin_api" for backend "pastebin"
+backend: DEBUG: Created backend instance "pastebin_nologin" for backend "pastebin"
+modules: DEBUG: Loaded module "pastebin" from /home/bb-weboob/buildslave/penguin/build/modules/pastebin
+backend: DEBUG: Created backend instance "pastebin_loggedin_api" for backend "pastebin"
+backend: DEBUG: Created backend instance "pastebin_loggedin" for backend "pastebin"
+backend: DEBUG: Created backend instance "pastebin_nologin_api" for backend "pastebin"
+backend: DEBUG: Created backend instance "pastebin_nologin" for backend "pastebin"
+modules: DEBUG: Loaded module "pastebin" from /home/bb-weboob/buildslave/penguin/build/modules/pastebin
+backend: DEBUG: Created backend instance "pastebin_loggedin_api" for backend "pastebin"
+backend: DEBUG: Created backend instance "pastebin_loggedin" for backend "pastebin"
+backend: DEBUG: Created backend instance "pastebin_nologin_api" for backend "pastebin"
+backend: DEBUG: Created backend instance "pastebin_nologin" for backend "pastebin"
+modules: DEBUG: Loaded module "piratebay" from /home/bb-weboob/buildslave/penguin/build/modules/piratebay
+backend: DEBUG: Created backend instance "piratebay" for backend "piratebay"
+modules: DEBUG: Loaded module "radiofrance" from /home/bb-weboob/buildslave/penguin/build/modules/radiofrance
+backend: DEBUG: Created backend instance "radiofrance" for backend "radiofrance"
+modules: DEBUG: Loaded module "radiofrance" from /home/bb-weboob/buildslave/penguin/build/modules/radiofrance
+backend: DEBUG: Created backend instance "radiofrance" for backend "radiofrance"
+modules: DEBUG: Loaded module "yahoo" from /home/bb-weboob/buildslave/penguin/build/modules/yahoo
+backend: DEBUG: Created backend instance "yahoo" for backend "yahoo"
+modules: DEBUG: Loaded module "youjizz" from /home/bb-weboob/buildslave/penguin/build/modules/youjizz
+backend: DEBUG: Created backend instance "youjizz" for backend "youjizz"
+modules: DEBUG: Loaded module "youjizz" from /home/bb-weboob/buildslave/penguin/build/modules/youjizz
+backend: DEBUG: Created backend instance "youjizz" for backend "youjizz"
+modules: DEBUG: Loaded module "youporn" from /home/bb-weboob/buildslave/penguin/build/modules/youporn
+backend: DEBUG: Created backend instance "youporn" for backend "youporn"
+modules: DEBUG: Loaded module "youporn" from /home/bb-weboob/buildslave/penguin/build/modules/youporn
+backend: DEBUG: Created backend instance "youporn" for backend "youporn"
+modules: DEBUG: Loaded module "youtube" from /home/bb-weboob/buildslave/penguin/build/modules/youtube
+backend: DEBUG: Created backend instance "youtube" for backend "youtube"
+modules: DEBUG: Loaded module "youtube" from /home/bb-weboob/buildslave/penguin/build/modules/youtube
+backend: DEBUG: Created backend instance "youtube" for backend "youtube"
+--------------------- >> end captured logging << ---------------------
+]]></skipped></testcase><testcase classname="arte.test.ArteTest" name="test_search" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="aum.test.AuMTest" name="test_contacts" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="aum.test.AuMTest" name="test_new_messages" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="banquepopulaire.test.BanquePopulaireTest" name="test_banquepop" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="batoto.test.BatotoTest" name="test_download" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="bnporc.test.BNPorcTest" name="test_bank" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="bnporc.test.BNPorcTest" name="test_msgs" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="boursorama.test.BoursoramaTest" name="test_boursorama" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="bouygues.test.BouyguesTest" name="test_bouygues" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="bred.test.BredTest" name="test_bred" time="0.011"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="caissedepargne.test.CaisseEpargneTest" name="test_caisse_epargne" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="canalplus.test.CanalPlusTest" name="test_canalplus" time="4.696" /><testcase classname="canalplus.test.CanalPlusTest" name="test_ls" time="0.083" /><testcase classname="canaltp.test.CanalTPTest" name="test_canaltp" time="1.595" /><testcase classname="cappedtv.test.CappedTest" name="test_latest" time="1.176" /><testcase classname="cappedtv.test.CappedTest" name="test_search" time="2.110" /><testcase classname="champslibres.test.ChampslibresTest" name="test_champslibres" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="cic.test.CICTest" name="test_cic" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="cragr.test.CrAgrTest" name="test_cragr" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="creditmutuel.test.CreditMutuelTest" name="test_crmut" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="dailymotion.test.DailymotionTest" name="test_latest" time="0.878" /><testcase classname="dailymotion.test.DailymotionTest" name="test_search" time="1.598" /><testcase classname="dlfp.test.DLFPTest" name="test_content_preview" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="dlfp.test.DLFPTest" name="test_get_content" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="dlfp.test.DLFPTest" name="test_new_messages" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="dlfp.test.DLFPTest" name="test_push_content" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="eatmanga.test.EatmangaTest" name="test_download" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="ebonics.test.EbonicsTest" name="test_translate" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="ecrans.test.EcransTest" name="test_new_messages" time="2.620" /><testcase classname="ehentai.test.EHentaiTest" name="test_latest" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="ehentai.test.EHentaiTest" name="test_search" time="0.001"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="fortuneo.test.FortuneoTest" name="test_fortuneo" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="fourchan.test.FourChanTest" name="test_new_messages" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="francetelevisions.test.PluzzTest" name="test_latest" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="francetelevisions.test.PluzzTest" name="test_search" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="freemobile.test.FreeMobileTest" name="test_freemobile" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="gazelle.test.GazelleTest" name="test_torrent" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="geolocip.test.GeolocIPTest" name="test_geolocip" time="0.523" /><testcase classname="googletranslate.test.GoogleTranslateTest" name="test_translate" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="hds.test.HDSTest" name="test_new_messages" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="hsbc.test.HSBCTest" name="test_hsbc" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="ina.test.INATest" name="test_ina" time="4.517" /><testcase classname="ing.test.INGTest" name="test_ing" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="inrocks.test.InrocksTest" name="test_new_messages" time="18.995" /><testcase classname="ipinfodb.test.IpinfodbTest" name="test_ipinfobd" time="1.198" /><testcase classname="isohunt.test.IsohuntTest" name="test_torrent" time="4.896" /><testcase classname="kickass.test.KickassTest" name="test_torrent" time="7.438" /><testcase classname="lcl.test.LCLtTest" name="test_lcl" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="leclercmobile.test.LeclercMobileTest" name="test_leclercmobile" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="lefigaro.test.LeFigaroTest" name="test_content" time="2.842" /><testcase classname="lefigaro.test.LeFigaroTest" name="test_new_messages" time="4.246"><error type="exceptions.UnicodeDecodeError" message="'utf8' codec can't decode byte 0xe9 in position 49: invalid continuation byte&#10;-------------------- &gt;&gt; begin captured logging &lt;&lt; --------------------&#10;backend.lefigaro.browser: DEBUG: [user_id=None] Went on http://www.lefigaro.fr/rugby/2012/11/10/02002-20121110ARTSPO00482-france-australie-en-direct.php&#10;backend.lefigaro.browser: DEBUG: [user_id=None] Went on http://www.lefigaro.fr/international/2012/11/10/01003-20121110ARTFIG00390-la-bbc-secouee-par-une-fausse-accusation-de-pedophilie.php&#10;backend.lefigaro.browser: DEBUG: [user_id=None] Went on http://www.lefigaro.fr/football-ligue-1-et-2/2012/11/10/02013-20121110ARTSPO00420-saint-etienne-troyes-en-direct.php&#10;backend.lefigaro.browser: DEBUG: [user_id=None] Went on http://www.lefigaro.fr/elections-americaines/2012/11/09/01040-20121109ARTFIG00602-obama-tente-de-renouer-avec-les-republicains.php&#10;backend.lefigaro.browser: DEBUG: [user_id=None] Went on http://www.lefigaro.fr/politique/2012/11/09/01002-20121109ARTFIG00642-le-maire-de-sevran-en-greve-de-la-faim-devant-l-assemblee.php&#10;backend.lefigaro.browser: DEBUG: [user_id=None] Went on http://www.lefigaro.fr/international/2012/11/10/01003-20121110DIMFIG00454-ces-scandals-sexuels-qui-ont-agite-la-vie-politique-americaine.php&#10;backend.lefigaro.browser: DEBUG: [user_id=None] Went on http://www.lefigaro.fr/flash-eco/2012/11/10/97002-20121110FILWWW00453-lauvergeon-pilotera-le-debat-sur-l-energie.php&#10;backend.lefigaro.browser: DEBUG: [user_id=None] Went on http://www.lefigaro.fr/flash-actu/2012/11/10/97001-20121110FILWWW00431-manifestation-pour-les-prisonniers-basques.php&#10;--------------------- &gt;&gt; end captured logging &lt;&lt; ---------------------"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/unittest/case.py", line 327, in run
+    testMethod()
+  File "/home/bb-weboob/buildslave/penguin/build/modules/lefigaro/test.py", line 32, in test_new_messages
+    for message in self.backend.iter_unread_messages():
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/capabilities/messages/GenericBackend.py", line 102, in iter_unread_messages
+    self.fill_thread(thread, 'root')
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/capabilities/messages/GenericBackend.py", line 95, in fill_thread
+    t = self.get_thread(thread)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/capabilities/messages/GenericBackend.py", line 57, in get_thread
+    content = self.browser.get_content(id)
+  File "/home/bb-weboob/buildslave/penguin/build/modules/lefigaro/browser.py", line 55, in get_content
+    return self.page.get_article(_id)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/capabilities/messages/genericArticle.py", line 153, in get_article
+    __article.body   = self.get_body()
+  File "/home/bb-weboob/buildslave/penguin/build/modules/lefigaro/pages/flashactu.py", line 35, in get_body
+    return self.parser.tostring(element_body)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/parsers/lxmlparser.py", line 46, in tostring
+    return lxml.html.tostring(element, encoding=unicode)
+  File "/usr/lib/python2.7/site-packages/lxml/html/__init__.py", line 1577, in tostring
+    doctype=doctype)
+  File "lxml.etree.pyx", line 3088, in lxml.etree.tostring (src/lxml/lxml.etree.c:62533)
+  File "serializer.pxi", line 137, in lxml.etree._tostring (src/lxml/lxml.etree.c:98614)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xe9 in position 49: invalid continuation byte
+-------------------- >> begin captured logging << --------------------
+backend.lefigaro.browser: DEBUG: [user_id=None] Went on http://www.lefigaro.fr/rugby/2012/11/10/02002-20121110ARTSPO00482-france-australie-en-direct.php
+backend.lefigaro.browser: DEBUG: [user_id=None] Went on http://www.lefigaro.fr/international/2012/11/10/01003-20121110ARTFIG00390-la-bbc-secouee-par-une-fausse-accusation-de-pedophilie.php
+backend.lefigaro.browser: DEBUG: [user_id=None] Went on http://www.lefigaro.fr/football-ligue-1-et-2/2012/11/10/02013-20121110ARTSPO00420-saint-etienne-troyes-en-direct.php
+backend.lefigaro.browser: DEBUG: [user_id=None] Went on http://www.lefigaro.fr/elections-americaines/2012/11/09/01040-20121109ARTFIG00602-obama-tente-de-renouer-avec-les-republicains.php
+backend.lefigaro.browser: DEBUG: [user_id=None] Went on http://www.lefigaro.fr/politique/2012/11/09/01002-20121109ARTFIG00642-le-maire-de-sevran-en-greve-de-la-faim-devant-l-assemblee.php
+backend.lefigaro.browser: DEBUG: [user_id=None] Went on http://www.lefigaro.fr/international/2012/11/10/01003-20121110DIMFIG00454-ces-scandals-sexuels-qui-ont-agite-la-vie-politique-americaine.php
+backend.lefigaro.browser: DEBUG: [user_id=None] Went on http://www.lefigaro.fr/flash-eco/2012/11/10/97002-20121110FILWWW00453-lauvergeon-pilotera-le-debat-sur-l-energie.php
+backend.lefigaro.browser: DEBUG: [user_id=None] Went on http://www.lefigaro.fr/flash-actu/2012/11/10/97001-20121110FILWWW00431-manifestation-pour-les-prisonniers-basques.php
+--------------------- >> end captured logging << ---------------------
+]]></error></testcase><testcase classname="mangafox.test.MangafoxTest" name="test_download" time="0.001"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="mangahere.test.MangahereTest" name="test_download" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="mangareader.test.MangareaderTest" name="test_download" time="0.002"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="mediawiki.test.MediawikiTest" name="test_content_preview" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="mediawiki.test.MediawikiTest" name="test_get_content" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="mediawiki.test.MediawikiTest" name="test_iter_revisions" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="mediawiki.test.MediawikiTest" name="test_push_content" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="meteofrance.test.MeteoFranceTest" name="test_meteofrance" time="1.424" /><testcase classname="minutes20.test.Minutes20Test" name="test_new_messages" time="7.326" /><testcase classname="newsfeed.test.NewsfeedTest" name="test_newsfeed" time="0.415" /><testcase classname="nolifetv.test.NolifeTVTest" name="test_latest" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="nolifetv.test.NolifeTVTest" name="test_search" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="nova.test.NovaTest" name="test_nova" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="opacwebaloes.test.AloestTest" name="test_aloes" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="ouifm.test.OuiFMTest" name="test_ouifm" time="0.596" /><testcase classname="pap.test.PapTest" name="test_pap" time="0.001"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="pastealacon.test.PastealaconTest" name="test_can_post" time="0.003" /><testcase classname="pastealacon.test.PastealaconTest" name="test_checkurl" time="0.005" /><testcase classname="pastealacon.test.PastealaconTest" name="test_notfound" time="0.556" /><testcase classname="pastealacon.test.PastealaconTest" name="test_post" time="1.474" /><testcase classname="pastealacon.test.PastealaconTest" name="test_spam" time="0.576" /><testcase classname="pastebin.test.PastebinTest" name="test_can_post" time="0.007" /><testcase classname="pastebin.test.PastebinTest" name="test_checkurl" time="0.002" /><testcase classname="pastebin.test.PastebinTest" name="test_get_paste" time="1.422" /><testcase classname="pastebin.test.PastebinTest" name="test_notfound" time="1.445" /><testcase classname="pastebin.test.PastebinTest" name="test_post" time="2.768"><failure type="exceptions.AssertionError" message="&#10;-------------------- &gt;&gt; begin captured logging &lt;&lt; --------------------&#10;backend.pastebin_loggedin.browser: DEBUG: [user_id=ouiboube] Went on http://pastebin.com/&#10;backend.pastebin_loggedin.browser: DEBUG: !! Relogin !!&#10;backend.pastebin_loggedin.browser: DEBUG: [user_id=ouiboube] Went on http://pastebin.com/login&#10;backend.pastebin_loggedin.browser: DEBUG: [user_id=ouiboube] Went on http://pastebin.com/u/ouiboube&#10;backend.pastebin_loggedin.browser: DEBUG: [user_id=ouiboube] Went on http://pastebin.com/&#10;backend.pastebin_loggedin.browser: DEBUG: [user_id=ouiboube] Went on http://pastebin.com/3tbmfNWR&#10;backend.pastebin_loggedin.browser: DEBUG: [user_id=ouiboube] Went on http://pastebin.com/3tbmfNWR&#10;--------------------- &gt;&gt; end captured logging &lt;&lt; ---------------------"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/unittest/case.py", line 327, in run
+    testMethod()
+  File "/home/bb-weboob/buildslave/penguin/build/modules/pastebin/test.py", line 52, in test_post
+    assert p.public is True
+AssertionError: 
+-------------------- >> begin captured logging << --------------------
+backend.pastebin_loggedin.browser: DEBUG: [user_id=ouiboube] Went on http://pastebin.com/
+backend.pastebin_loggedin.browser: DEBUG: !! Relogin !!
+backend.pastebin_loggedin.browser: DEBUG: [user_id=ouiboube] Went on http://pastebin.com/login
+backend.pastebin_loggedin.browser: DEBUG: [user_id=ouiboube] Went on http://pastebin.com/u/ouiboube
+backend.pastebin_loggedin.browser: DEBUG: [user_id=ouiboube] Went on http://pastebin.com/
+backend.pastebin_loggedin.browser: DEBUG: [user_id=ouiboube] Went on http://pastebin.com/3tbmfNWR
+backend.pastebin_loggedin.browser: DEBUG: [user_id=ouiboube] Went on http://pastebin.com/3tbmfNWR
+--------------------- >> end captured logging << ---------------------
+]]></failure></testcase><testcase classname="pastebin.test.PastebinTest" name="test_specialchars" time="1.014"><error type="exceptions.AttributeError" message="'NoneType' object has no attribute 'get_id'&#10;-------------------- &gt;&gt; begin captured logging &lt;&lt; --------------------&#10;backend.pastebin_nologin.browser: DEBUG: [user_id=] Went on http://pastebin.com/&#10;backend.pastebin_nologin.browser: WARNING: There isn't any page corresponding to URL http://pastebin.com/warning.php?p=1&#10;backend.pastebin_nologin.browser: WARNING: Response saved to /tmp/weboob_session_bneGNE/0.html&#10;--------------------- &gt;&gt; end captured logging &lt;&lt; ---------------------"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/unittest/case.py", line 327, in run
+    testMethod()
+  File "/home/bb-weboob/buildslave/penguin/build/modules/pastebin/test.py", line 57, in test_specialchars
+    self.backend.post_paste(p1, max_age=600)
+  File "/home/bb-weboob/buildslave/penguin/build/modules/pastebin/backend.py", line 103, in post_paste
+    self.browser.post_paste(paste, expiration=self.EXPIRATIONS.get(expiration))
+  File "/home/bb-weboob/buildslave/penguin/build/modules/pastebin/browser.py", line 90, in post_paste
+    paste.id = self.page.get_id()
+AttributeError: 'NoneType' object has no attribute 'get_id'
+-------------------- >> begin captured logging << --------------------
+backend.pastebin_nologin.browser: DEBUG: [user_id=] Went on http://pastebin.com/
+backend.pastebin_nologin.browser: WARNING: There isn't any page corresponding to URL http://pastebin.com/warning.php?p=1
+backend.pastebin_nologin.browser: WARNING: Response saved to /tmp/weboob_session_bneGNE/0.html
+--------------------- >> end captured logging << ---------------------
+]]></error></testcase><testcase classname="phpbb.test.PhpBBTest" name="test_unread_messages" time="0.001"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="phpbb.test.PhpBBTest" name="testthreads" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="piratebay.test.PiratebayTest" name="test_torrent" time="1.519" /><testcase classname="presseurop.test.PresseuropTest" name="test_new_messages" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="prixcarburants.test.PrixCarburantsTest" name="test_prixcarburants" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="radiofrance.test.RadioFranceTest" name="test_get_radios" time="2.512" /><testcase classname="radiofrance.test.RadioFranceTest" name="test_get_video" time="12.740" /><testcase classname="sachsen.test.SachsenTest" name="test_sachsen" time="0.001"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="seloger.test.SeLogerTest" name="test_seloger" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="sfr.test.SFRTest" name="test_sfr" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="simplyreadit.test.SimplyreaditTest" name="test_download" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="societegenerale.test.SocieteGeneraleTest" name="test_societegenerale" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="taz.test.TazTest" name="test_new_messages" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="transilien.test.TransilienTest" name="test_departures" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="transilien.test.TransilienTest" name="test_roadmap" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="trictractv.test.TricTracTVTest" name="test_trictractv" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="weather.test.WeatherTest" name="test_cities" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="wordreference.test.WordReferenceTest" name="test_translate" time="0.000"><skipped type="unittest.case.SkipTest" message="No backends configured for this module."><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 133, in run
+    self.runTest(result)
+  File "/usr/lib/python2.7/site-packages/nose/case.py", line 151, in runTest
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 391, in __call__
+    return self.run(*args, **kwds)
+  File "/home/bb-weboob/buildslave/penguin/build/weboob/tools/test.py", line 56, in run
+    raise SkipTest('No backends configured for this module.')
+SkipTest: No backends configured for this module.
+]]></skipped></testcase><testcase classname="yahoo.test.YahooTest" name="test_meteo" time="1.598" /><testcase classname="youjizz.test.YoujizzTest" name="test_latest" time="1.932" /><testcase classname="youjizz.test.YoujizzTest" name="test_search" time="1.652" /><testcase classname="youporn.test.YoupornTest" name="test_latest" time="0.877" /><testcase classname="youporn.test.YoupornTest" name="test_search" time="1.533" /><testcase classname="youtube.test.YoutubeTest" name="test_latest" time="11.883" /><testcase classname="youtube.test.YoutubeTest" name="test_search" time="14.246" /></testsuite>
