@@ -30,22 +30,21 @@ class TestCase(unittest.TestCase):
 
     def seed(self, result, typename=None, message=None):
         """ Provide the expected result """
-        self._seed = (result, typename, message)
+        self.result, self.typename, self.message = result, typename, message
 
     def run(self, tr=None):
         """ Fake run() that produces the seeded result """
         tr = tr or self.TR_CLASS()
-        result, typename, message = self._seed
 
         tr.startTest(self)
-        if result == 'success':
+        if self.result == 'success':
             tr.addSuccess(self)
-        elif result == 'skipped':
-            tr.addSkip(self, '%s: %s' % (typename, message))
-        elif result == 'error':
-            tr.addError(self, (typename, message))
-        elif result == 'failure':
-            tr.addFailure(self, (typename, message))
+        elif self.result == 'skipped':
+            tr.addSkip(self, '%s: %s' % (self.typename, self.message))
+        elif self.result == 'error':
+            tr.addError(self, (self.typename, self.message))
+        elif self.result == 'failure':
+            tr.addFailure(self, (self.typename, self.message))
         tr.stopTest(self)
 
         return tr
@@ -61,6 +60,34 @@ class TestCase(unittest.TestCase):
     def runTest(self):
         """ Dummy method so __init__ does not fail """
         self.run()
+
+    @property
+    def basename(self):
+        return self.classname.rpartition('.')[2]
+
+    @property
+    def success(self):
+        return self.result == 'success'
+
+    @property
+    def skipped(self):
+        return self.result == 'skipped'
+
+    @property
+    def failed(self):
+        return self.result == 'failure'
+
+    @property
+    def errored(self):
+        return self.result == 'error'
+
+    @property
+    def good(self):
+        return self.skipped or self.success
+
+    @property
+    def bad(self):
+        return not self.good
 
 
 class TestSuite(unittest.TestSuite):
