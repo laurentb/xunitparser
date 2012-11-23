@@ -1,15 +1,19 @@
 #!/usr/bin/env python
 from xunitparser import parse
+from unittest import TestCase
 
 
-def test_read():
-    with open('penguin-1352619250.xml') as f:
-        # the lib already does some sanity checks;
-        # passing this is already a good test in itself
-        ts, tr = parse(f)
+class XupTest(TestCase):
+    def setUp(self):
+        """ read the default file """
+        with open('penguin-1352619250.xml') as f:
+            # the lib already does some sanity checks;
+            # passing this is already a good test in itself
+            self.ts, self.tr = parse(f)
 
-        # check some expected results
-        for test in ts:
+    def test_results(self):
+        """ check some expected results """
+        for test in self.ts:
             if test.basename == 'ArteTest':
                 assert test.good
                 assert test.skipped
@@ -21,5 +25,6 @@ def test_read():
                 if test.methodname == 'test_post':
                     assert test.bad
 
-        # assert hashes are unique
-        assert len(list(hash(t) for t in ts)) == len(set(hash(t) for t in ts))
+    def test_hashes(self):
+        """ assert hashes are unique """
+        assert len(list(hash(t) for t in self.ts)) == len(set(hash(t) for t in self.ts))
