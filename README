@@ -7,3 +7,28 @@ Description
 
 xunitparser reads a JUnit/XUnit XML file and maps it to Python objects.
 It tries to use the objects available in the standard ``unittest`` module.
+
+
+Usage
+-----
+
+::
+
+    import xunitparser
+    tr, ts = xunitparser.parse(open('/path/to/unit.xml'))
+
+
+You can change the classes used (though they probably would not work unless
+they inherit from the ``xunitparser`` ones) by using your own
+``xunitparser.Parser`` class and change the ``*_CLASS`` variables.
+
+Some helpful properties are added to the TestCase class::
+
+    for tc in ts:
+        print print('Class %s, method %s' % (tc.classname, tc.methodname))
+        if tc.good:
+            print('went well...', 'but did not run.' if tc.skip else '')
+        else:
+            print('went wrong.')
+
+For more, please read the source code - it is very minimal.
