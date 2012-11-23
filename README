@@ -1,0 +1,9 @@
+===========
+xunitparser
+===========
+
+Description
+-----------
+
+xunitparser reads a JUnit/XUnit XML file and maps it to Python objects.
+It tries to use the objects available in the standard ``unittest`` module.
