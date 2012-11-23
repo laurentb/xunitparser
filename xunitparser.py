@@ -9,22 +9,26 @@ class TestResult(unittest.TestResult):
     #classname = el.attrib['classname'].rpartition('.')
 
 
-class TestCase(object):
+class TestCase(unittest.TestCase):
     TR_CLASS = TestResult
 
-    def __init__(self, classname, method):
+    def __init__(self, classname, methodname):
+        super(TestCase, self).__init__()
         self.classname = classname
-        self.method = method
+        self.methodname = methodname
 
     def __str__(self):
-        return "%s (%s)" % (self.method, self.classname)
+        return "%s (%s)" % (self.methodname, self.classname)
 
     def __repr__(self):
         return "<%s testMethod=%s>" % \
-               (self.classname, self.method)
+               (self.classname, self.methodname)
 
     def __call__(self, *args, **kwds):
         return self.run(*args, **kwds)
+
+    def id(self):
+        return "%s.%s" % (self.classname, self.methodname)
 
     def seed(self, result, typename=None, message=None):
         self._seed = (result, typename, message)
@@ -45,6 +49,15 @@ class TestCase(object):
         tr.stopTest(self)
 
         return tr
+
+    def setUp(self):
+        pass
+
+    def tearDown(self):
+        pass
+
+    def runTest(self):
+        self.run()
 
 
 class TestSuite(unittest.TestSuite):
