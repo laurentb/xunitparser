@@ -22,6 +22,9 @@ class TestCase(unittest.TestCase):
         return "<%s testMethod=%s>" % \
                (self.classname, self.methodname)
 
+    def __hash__(self):
+        return hash((type(self), self.classname, self.methodname))
+
     def id(self):
         return "%s.%s" % (self.classname, self.methodname)
 
