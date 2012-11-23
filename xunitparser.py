@@ -22,9 +22,6 @@ class TestCase(unittest.TestCase):
         return "<%s testMethod=%s>" % \
                (self.classname, self.methodname)
 
-    def __call__(self, *args, **kwds):
-        return self.run(*args, **kwds)
-
     def id(self):
         return "%s.%s" % (self.classname, self.methodname)
 
