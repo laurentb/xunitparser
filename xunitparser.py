@@ -6,8 +6,6 @@ class TestResult(unittest.TestResult):
     def _exc_info_to_string(self, err, test):
         return '%s: %s' % err
 
-    #classname = el.attrib['classname'].rpartition('.')
-
 
 class TestCase(unittest.TestCase):
     TR_CLASS = TestResult
@@ -31,9 +29,11 @@ class TestCase(unittest.TestCase):
         return "%s.%s" % (self.classname, self.methodname)
 
     def seed(self, result, typename=None, message=None):
+        """ Provide the expected result """
         self._seed = (result, typename, message)
 
     def run(self, tr=None):
+        """ Fake run() that produces the seeded result """
         tr = tr or self.TR_CLASS()
         result, typename, message = self._seed
 
@@ -51,12 +51,15 @@ class TestCase(unittest.TestCase):
         return tr
 
     def setUp(self):
+        """ Dummy method so __init__ does not fail """
         pass
 
     def tearDown(self):
+        """ Dummy method so __init__ does not fail """
         pass
 
     def runTest(self):
+        """ Dummy method so __init__ does not fail """
         self.run()
 
 
