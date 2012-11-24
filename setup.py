@@ -1,0 +1,22 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+from setuptools import setup, find_packages
+
+setup(
+    name='xunitparser',
+    version='1.0.0',
+    description='Read JUnit/XUnit XML files and map them to Python objects',
+    long_description=open('README').read(),
+    author='Laurent Bachelier',
+    author_email='laurent@bachelier.name',
+    url='http://git.p.engu.in/laurentb/xunitparser/',
+    py_modules=['xunitparser'],
+    test_suite='test.XupTest',
+    classifiers=[
+        'License :: OSI Approved :: MIT License',
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 3',
+    ],
+    use_2to3=True,
+)
