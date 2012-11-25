@@ -12,7 +12,7 @@ setup(
     author_email='laurent@bachelier.name',
     url='http://git.p.engu.in/laurentb/xunitparser/',
     py_modules=['xunitparser'],
-    test_suite='test.XupTest',
+    test_suite='test',
     classifiers=[
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 2',

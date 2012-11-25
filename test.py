@@ -3,10 +3,9 @@ from xunitparser import parse
 from unittest import TestCase
 
 
-class XupTest(TestCase):
+class X(object):
     def setUp(self):
-        """ read the default file """
-        with open('penguin-1352619250.xml') as f:
+        with open(self.FILENAME) as f:
             # the lib already does some sanity checks;
             # passing this is already a good test in itself
             self.ts, self.tr = parse(f)
@@ -28,3 +27,11 @@ class XupTest(TestCase):
     def test_hashes(self):
         """ assert hashes are unique """
         assert len(list(hash(t) for t in self.ts)) == len(set(hash(t) for t in self.ts))
+
+
+class Test1(X, TestCase):
+    FILENAME = 'test1.xml'
+
+
+class Test2(X, TestCase):
+    FILENAME = 'test2.xml'

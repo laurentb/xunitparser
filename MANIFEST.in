@@ -1,3 +1,2 @@
 include README
-include test.py
-include penguin-1352619250.xml
+include test.py test*.xml
