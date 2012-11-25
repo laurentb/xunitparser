@@ -1,5 +1,12 @@
-from xml.etree import ElementTree
 import unittest
+from xml.etree import ElementTree
+from datetime import timedelta
+
+
+def to_timedelta(val):
+    if val is None:
+        return None
+    return timedelta(seconds=float(val))
 
 
 class TestResult(unittest.TestResult):
@@ -30,7 +37,7 @@ class TestCase(unittest.TestCase):
 
     def seed(self, result, typename=None, message=None):
         """ Provide the expected result """
-        self.result, self.typename, self.message = result, typename, message
+        self.result, self.typename, self.message= result, typename, message
 
     def run(self, tr=None):
         """ Fake run() that produces the seeded result """
@@ -110,6 +117,7 @@ class Parser(object):
                 if len(el) == 0:
                     tc = self.TC_CLASS(el.attrib['classname'], el.attrib['name'])
                     tc.seed('success')
+                    tc.time = to_timedelta(el.attrib.get('time'))
                     ts.addTest(tc)
                 for e in el:
                     if e.tag in ('failure', 'error', 'skipped'):
@@ -118,8 +126,12 @@ class Parser(object):
                         message = e.attrib.get('message')
                         tc = self.TC_CLASS(el.attrib['classname'], el.attrib['name'])
                         tc.seed(result, typename, message)
+                        tc.time = to_timedelta(el.attrib.get('time'))
                         ts.addTest(tc)
         tr = ts.run(self.TR_CLASS())
+
+        ts.name = root.attrib.get('name')
+        tr.time = to_timedelta(root.attrib.get('time'))
 
         # check totals if they are in the root XML element
         if 'errors' in root.attrib:

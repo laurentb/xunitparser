@@ -16,6 +16,7 @@ class X(object):
             if test.basename == 'ArteTest':
                 assert test.good
                 assert test.skipped
+                assert test.time is not None
             if test.basename == 'YouTubeTest':
                 assert test.good
                 assert not test.skipped
@@ -32,6 +33,16 @@ class X(object):
 class Test1(X, TestCase):
     FILENAME = 'test1.xml'
 
+    def test_notime(self):
+        assert self.tr.time is None
+
+    def test_name(self):
+        assert self.ts.name == 'nosetests'
+
 
 class Test2(X, TestCase):
     FILENAME = 'test2.xml'
+
+    def test_time(self):
+        assert self.tr.time is not None
+        assert str(self.tr.time).startswith('0:00:05.')
