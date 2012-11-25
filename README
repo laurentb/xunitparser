@@ -20,7 +20,7 @@ Usage
 
 You can change the classes used (though they probably would not work unless
 they inherit from the ``xunitparser`` ones) by using your own
-``xunitparser.Parser`` class and change the ``*_CLASS`` variables.
+``xunitparser.Parser`` class and changing the ``*_CLASS`` variables.
 
 Some helpful properties are added to the TestCase class::
 
@@ -36,4 +36,4 @@ For more, please read the source code - it is very minimal.
 Limitations
 -----------
 
-Only tested against ``nosetests`` output for now.
+Only tested against ``nosetests`` and ``py.test`` output for now.
