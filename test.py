@@ -31,6 +31,7 @@ class X(object):
         assert len(list(hash(t) for t in self.ts)) == len(set(hash(t) for t in self.ts))
 
     def test_testresult(self):
+        assert len(self.tr.failures)
         for f in self.tr.failures:
             if 'pastebin.test.PastebinTest' in repr(f[0]):
                 assert 'backend.pastebin_loggedin' in f[1]
