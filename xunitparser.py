@@ -37,7 +37,7 @@ class TestCase(unittest.TestCase):
 
     def seed(self, result, typename=None, message=None):
         """ Provide the expected result """
-        self.result, self.typename, self.message= result, typename, message
+        self.result, self.typename, self.message = result, typename, message
 
     def run(self, tr=None):
         """ Fake run() that produces the seeded result """
