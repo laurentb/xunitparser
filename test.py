@@ -47,6 +47,9 @@ class Test1(X, TestCase):
     def test_name(self):
         assert self.ts.name == 'nosetests'
 
+    def test_numbers(self):
+        assert self.tr.testsRun == 104
+
 
 class Test2(X, TestCase):
     FILENAME = 'test2.xml'
@@ -54,6 +57,7 @@ class Test2(X, TestCase):
     def test_time(self):
         assert self.tr.time is not None
         assert str(self.tr.time).startswith('0:00:05.')
+
 
 class Test3(X, TestCase):
     FILENAME = 'test3.xml'
@@ -63,4 +67,7 @@ class Test3(X, TestCase):
             if len(f[1]):
                 assert 'foo.py' in f[1]
                 assert 'foo.py' in f[0].trace
+                assert 'AssertionError' == f[0].typename
+                assert 'AssertionError' in f[1]
+                assert 'None' not in f[1]
                 assert f[0].message is None
