@@ -25,6 +25,7 @@ class X(object):
                 if test.methodname == 'test_post':
                     assert test.bad
                     assert 'backend.pastebin_loggedin' in test.message
+                    assert 'python2.7' in test.trace
 
     def test_hashes(self):
         """ assert hashes are unique """
@@ -53,3 +54,13 @@ class Test2(X, TestCase):
     def test_time(self):
         assert self.tr.time is not None
         assert str(self.tr.time).startswith('0:00:05.')
+
+class Test3(X, TestCase):
+    FILENAME = 'test3.xml'
+
+    def test_msg(self):
+        for f in self.tr.failures:
+            if len(f[1]):
+                assert 'foo.py' in f[1]
+                assert 'foo.py' in f[0].trace
+                assert f[0].message is None

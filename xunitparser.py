@@ -11,7 +11,8 @@ def to_timedelta(val):
 
 class TestResult(unittest.TestResult):
     def _exc_info_to_string(self, err, test):
-        return '%s: %s' % err
+        err = (e for e in err if e)
+        return ': '.join(err)
 
 
 class TestCase(unittest.TestCase):
@@ -35,9 +36,9 @@ class TestCase(unittest.TestCase):
     def id(self):
         return "%s.%s" % (self.classname, self.methodname)
 
-    def seed(self, result, typename=None, message=None):
+    def seed(self, result, typename=None, message=None, trace=None):
         """ Provide the expected result """
-        self.result, self.typename, self.message = result, typename, message
+        self.result, self.typename, self.message, self.trace = result, typename, message, trace
 
     def run(self, tr=None):
         """ Fake run() that produces the seeded result """
@@ -47,14 +48,22 @@ class TestCase(unittest.TestCase):
         if self.result == 'success':
             tr.addSuccess(self)
         elif self.result == 'skipped':
-            tr.addSkip(self, '%s: %s' % (self.typename, self.message))
+            tr.addSkip(self, '%s: %s' % (self.typename, self._textMessage()))
         elif self.result == 'error':
-            tr.addError(self, (self.typename, self.message))
+            tr.addError(self, (self.typename, self._textMessage()))
         elif self.result == 'failure':
-            tr.addFailure(self, (self.typename, self.message))
+            tr.addFailure(self, (self.typename, self._textMessage()))
         tr.stopTest(self)
 
         return tr
+
+    def _textMessage(self):
+        msg = []
+        if self.message:
+            msg.append(self.message)
+        if self.trace:
+            msg.append(self.trace)
+        return '\n\n'.join(msg) or None
 
     def setUp(self):
         """ Dummy method so __init__ does not fail """
@@ -116,7 +125,7 @@ class Parser(object):
             if el.tag == 'testcase':
                 if len(el) == 0:
                     tc = self.TC_CLASS(el.attrib['classname'], el.attrib['name'])
-                    tc.seed('success')
+                    tc.seed('success', trace=el.text or None)
                     tc.time = to_timedelta(el.attrib.get('time'))
                     ts.addTest(tc)
                 for e in el:
@@ -125,7 +134,7 @@ class Parser(object):
                         typename = e.attrib.get('type')
                         message = e.attrib.get('message')
                         tc = self.TC_CLASS(el.attrib['classname'], el.attrib['name'])
-                        tc.seed(result, typename, message)
+                        tc.seed(result, typename, message, e.text or None)
                         tc.time = to_timedelta(el.attrib.get('time'))
                         ts.addTest(tc)
         tr = ts.run(self.TR_CLASS())
