@@ -26,6 +26,10 @@ class X(object):
                     assert test.bad
                     assert 'backend.pastebin_loggedin' in test.message
                     assert 'python2.7' in test.trace
+                    assert 'exceptions.AssertionError' in test.alltext
+                    assert 'exceptions.AssertionError' not in test.message
+                    assert 'backend.pastebin_loggedin' in test.alltext
+                    assert 'python2.7' in test.alltext
 
     def test_hashes(self):
         """ assert hashes are unique """

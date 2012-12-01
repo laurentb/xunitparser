@@ -58,12 +58,15 @@ class TestCase(unittest.TestCase):
         return tr
 
     def _textMessage(self):
-        msg = []
-        if self.message:
-            msg.append(self.message)
-        if self.trace:
-            msg.append(self.trace)
+        msg = (e for e in (self.message, self.trace) if e)
         return '\n\n'.join(msg) or None
+
+    @property
+    def alltext(self):
+        err = (e for e in (self.typename, self.message) if e)
+        err = ': '.join(err)
+        txt = (e for e in (err, self.trace) if e)
+        return '\n\n'.join(txt) or None
 
     def setUp(self):
         """ Dummy method so __init__ does not fail """
