@@ -15,7 +15,7 @@ Usage
 ::
 
     import xunitparser
-    tr, ts = xunitparser.parse(open('/path/to/unit.xml'))
+    ts, tr = xunitparser.parse(open('/path/to/unit.xml'))
 
 
 You can change the classes used (though they probably would not work unless
