@@ -5,7 +5,7 @@ from setuptools import setup
 
 setup(
     name='xunitparser',
-    version='1.1.1',
+    version='1.1.2',
     description='Read JUnit/XUnit XML files and map them to Python objects',
     long_description=open('README').read(),
     author='Laurent Bachelier',
