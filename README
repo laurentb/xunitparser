@@ -40,7 +40,14 @@ a good reference of what you can do with ``xunitparser``.
 
 __ http://docs.python.org/library/unittest.html
 
+
 Limitations
 -----------
 
 Only tested against ``nosetests`` and ``py.test`` output for now.
+
+
+Development
+-----------
+
+Contributions can be sent in the form of git patches, to laurent@bachelier.name.
