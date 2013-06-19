@@ -75,3 +75,7 @@ class Test3(X, TestCase):
                 assert 'AssertionError' in f[1]
                 assert 'None' not in f[1]
                 assert f[0].message is None
+
+
+class Test4(X, TestCase):
+    FILENAME = 'test4.xml'

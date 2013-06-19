@@ -120,26 +120,14 @@ class Parser(object):
 
     def parse(self, source):
         ts = self.TS_CLASS()
-
         xml = ElementTree.parse(source)
         root = xml.getroot()
-        assert root.tag == 'testsuite'
-        for el in xml.getroot():
-            if el.tag == 'testcase':
-                if len(el) == 0:
-                    tc = self.TC_CLASS(el.attrib['classname'], el.attrib['name'])
-                    tc.seed('success', trace=el.text or None)
-                    tc.time = to_timedelta(el.attrib.get('time'))
-                    ts.addTest(tc)
-                for e in el:
-                    if e.tag in ('failure', 'error', 'skipped'):
-                        result = e.tag
-                        typename = e.attrib.get('type')
-                        message = e.attrib.get('message')
-                        tc = self.TC_CLASS(el.attrib['classname'], el.attrib['name'])
-                        tc.seed(result, typename, message, e.text or None)
-                        tc.time = to_timedelta(el.attrib.get('time'))
-                        ts.addTest(tc)
+        if root.tag == 'testsuites':
+            for subroot in root:
+                self.parse_testsuite(subroot, ts)
+        else:
+            self.parse_testsuite(root, ts)
+
         tr = ts.run(self.TR_CLASS())
 
         ts.name = root.attrib.get('name')
@@ -156,6 +144,25 @@ class Parser(object):
             assert len(list(ts)) == int(root.attrib['tests'])
 
         return (ts, tr)
+
+    def parse_testsuite(self, root, ts):
+        assert root.tag == 'testsuite'
+        for el in root:
+            if el.tag == 'testcase':
+                if len(el) == 0:
+                    tc = self.TC_CLASS(el.attrib['classname'], el.attrib['name'])
+                    tc.seed('success', trace=el.text or None)
+                    tc.time = to_timedelta(el.attrib.get('time'))
+                    ts.addTest(tc)
+                for e in el:
+                    if e.tag in ('failure', 'error', 'skipped'):
+                        result = e.tag
+                        typename = e.attrib.get('type')
+                        message = e.attrib.get('message')
+                        tc = self.TC_CLASS(el.attrib['classname'], el.attrib['name'])
+                        tc.seed(result, typename, message, e.text or None)
+                        tc.time = to_timedelta(el.attrib.get('time'))
+                        ts.addTest(tc)
 
 
 def parse(source):
