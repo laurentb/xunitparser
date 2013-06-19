@@ -119,9 +119,12 @@ class Parser(object):
     TR_CLASS = TestResult
 
     def parse(self, source):
-        ts = self.TS_CLASS()
         xml = ElementTree.parse(source)
         root = xml.getroot()
+        return self.parse_root(root)
+
+    def parse_root(self, root):
+        ts = self.TS_CLASS()
         if root.tag == 'testsuites':
             for subroot in root:
                 self.parse_testsuite(subroot, ts)
