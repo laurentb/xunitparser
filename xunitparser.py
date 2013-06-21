@@ -17,6 +17,8 @@ class TestResult(unittest.TestResult):
 
 class TestCase(unittest.TestCase):
     TR_CLASS = TestResult
+    stdout = None
+    stderr = None
 
     def __init__(self, classname, methodname):
         super(TestCase, self).__init__()
@@ -108,6 +110,11 @@ class TestCase(unittest.TestCase):
     def bad(self):
         return not self.good
 
+    @property
+    def stdall(self):
+        """ All system output """
+        return '\n'.join([out for out in (self.stdout, self.stderr) if out])
+
 
 class TestSuite(unittest.TestSuite):
     pass
@@ -162,6 +169,10 @@ class Parser(object):
                         message = e.attrib.get('message')
                         tc.seed(result, typename, message, e.text or None)
                         tc.time = to_timedelta(el.attrib.get('time'))
+                    if e.tag == 'system-out':
+                        tc.stdout = e.text.strip()
+                    if e.tag == 'system-err':
+                        tc.stderr = e.text.strip()
                 ts.addTest(tc)
 
 

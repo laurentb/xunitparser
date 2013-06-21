@@ -30,6 +30,11 @@ class X(object):
                     assert 'exceptions.AssertionError' not in test.message
                     assert 'backend.pastebin_loggedin' in test.alltext
                     assert 'python2.7' in test.alltext
+            if test.methodname == '003-passed-test':
+                assert "system output" in test.stdall
+                assert "error output" in test.stdall
+                assert "system output" in test.stdout
+                assert "error output" in test.stderr
 
     def test_hashes(self):
         """ assert hashes are unique """
