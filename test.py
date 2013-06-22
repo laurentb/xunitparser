@@ -84,3 +84,6 @@ class Test3(X, TestCase):
 
 class Test4(X, TestCase):
     FILENAME = 'test4.xml'
+
+    def test_props(self):
+        assert self.ts.properties['assert-passed'] == '1'

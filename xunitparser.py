@@ -117,7 +117,9 @@ class TestCase(unittest.TestCase):
 
 
 class TestSuite(unittest.TestSuite):
-    pass
+    def __init__(self, *args, **kwargs):
+        super(TestSuite, self).__init__(*args, **kwargs)
+        self.properties = {}
 
 
 class Parser(object):
@@ -159,26 +161,37 @@ class Parser(object):
         assert root.tag == 'testsuite'
         for el in root:
             if el.tag == 'testcase':
+                self.parse_testcase(el, ts)
+            if el.tag == 'properties':
+                self.parse_properties(el, ts)
+
+    def parse_testcase(self, el, ts):
+        tc = self.TC_CLASS(el.attrib['classname'], el.attrib['name'])
+        tc.seed('success', trace=el.text or None)
+        tc.time = to_timedelta(el.attrib.get('time'))
+        restags = False
+        for e in el:
+            if e.tag in ('failure', 'error', 'skipped'):
                 tc = self.TC_CLASS(el.attrib['classname'], el.attrib['name'])
-                tc.seed('success', trace=el.text or None)
+                result = e.tag
+                typename = e.attrib.get('type')
+                message = e.attrib.get('message')
+                tc.seed(result, typename, message, e.text or None)
                 tc.time = to_timedelta(el.attrib.get('time'))
-                restags = False
-                for e in el:
-                    if e.tag in ('failure', 'error', 'skipped'):
-                        tc = self.TC_CLASS(el.attrib['classname'], el.attrib['name'])
-                        result = e.tag
-                        typename = e.attrib.get('type')
-                        message = e.attrib.get('message')
-                        tc.seed(result, typename, message, e.text or None)
-                        tc.time = to_timedelta(el.attrib.get('time'))
-                        ts.addTest(tc)
-                        restags = True
-                    if e.tag == 'system-out':
-                        tc.stdout = e.text.strip()
-                    if e.tag == 'system-err':
-                        tc.stderr = e.text.strip()
-                if not restags:
-                    ts.addTest(tc)
+                ts.addTest(tc)
+                restags = True
+            if e.tag == 'system-out':
+                tc.stdout = e.text.strip()
+            if e.tag == 'system-err':
+                tc.stderr = e.text.strip()
+        if not restags:
+            ts.addTest(tc)
+
+    def parse_properties(self, el, ts):
+        for e in el:
+            if e.tag == 'property':
+                assert e.attrib['name'] not in ts.properties
+                ts.properties[e.attrib['name']] = e.attrib['value']
 
 
 def parse(source):
