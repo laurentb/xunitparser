@@ -44,7 +44,7 @@ __ http://docs.python.org/library/unittest.html
 Limitations
 -----------
 
-The handling of results with multiple ``testsuite`` tag
+The handling of results with multiple ``testsuite`` tags
 in a ``testsuites`` tag could be better (samples needed).
 
 
