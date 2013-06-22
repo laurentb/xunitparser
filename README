@@ -44,7 +44,8 @@ __ http://docs.python.org/library/unittest.html
 Limitations
 -----------
 
-Only tested against ``nosetests`` and ``py.test`` output for now.
+The handling of results with multiple ``testsuite`` tag
+in a ``testsuites`` tag could be better (samples needed).
 
 
 Development
