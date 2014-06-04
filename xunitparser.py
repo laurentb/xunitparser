@@ -142,7 +142,6 @@ class Parser(object):
 
         tr = ts.run(self.TR_CLASS())
 
-        ts.name = root.attrib.get('name')
         tr.time = to_timedelta(root.attrib.get('time'))
 
         # check totals if they are in the root XML element
@@ -159,6 +158,8 @@ class Parser(object):
 
     def parse_testsuite(self, root, ts):
         assert root.tag == 'testsuite'
+        ts.name = root.attrib.get('name')
+        ts.package = root.attrib.get('package')
         for el in root:
             if el.tag == 'testcase':
                 self.parse_testcase(el, ts)

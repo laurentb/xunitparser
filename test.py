@@ -87,3 +87,9 @@ class Test4(X, TestCase):
 
     def test_props(self):
         assert self.ts.properties['assert-passed'] == '1'
+
+    def test_name_has_been_parsed_within_testsuites(self):
+        assert self.ts.name == 'base_test_1'
+
+    def test_testsuite_package_has_been_parsed(self):
+        assert self.ts.package == 'testdb'
