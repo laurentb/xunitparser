@@ -99,3 +99,13 @@ class Test4(X, TestCase):
 
 class Test5(X, TestCase):
     FILENAME = 'test5.xml'
+
+    def test_message(self):
+        found = False
+        for test in self.ts:
+            if test.bad:
+                assert test.errored
+                assert 'The step timed out' in test.message
+                assert 'PathToMyProject' in test.trace
+                found = True
+        assert found
