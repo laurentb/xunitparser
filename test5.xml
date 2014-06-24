@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<testsuites name="AllTestUnits" tests="2" failures="0" errors="1" time="60.736644">
+    <testsuite tests="2" failures="0" errors="1" time="60.736644" timestamp="2014-06-23T16:15:51GMT+02:00" name="Toplevel Test Suite">
+        <testcase classname="SomeWorkingTest" name="testWorking" time="0.844339"></testcase>
+        <testcase classname="SomeFailureTest" name="testFailure" time="10.108923">
+            <failure type="Failure" message="The step timed out after 10.00 seconds: Failed to find accessibility element with the label &quot;SomeButton&quot;">/PathToMyProject/SomeTest.m:31</failure>
+            <error type="Error"></error>
+        </testcase>
+    </testsuite>
+</testsuites>

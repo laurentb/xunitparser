@@ -1,6 +1,6 @@
 import unittest
-from xml.etree import ElementTree
 from datetime import timedelta
+from xml.etree import ElementTree
 
 
 def to_timedelta(val):
@@ -170,23 +170,28 @@ class Parser(object):
         tc = self.TC_CLASS(el.attrib['classname'], el.attrib['name'])
         tc.seed('success', trace=el.text or None)
         tc.time = to_timedelta(el.attrib.get('time'))
-        restags = False
+        message = None
+        text = None
         for e in el:
+            # error takes over failure in JUnit 4
             if e.tag in ('failure', 'error', 'skipped'):
                 tc = self.TC_CLASS(el.attrib['classname'], el.attrib['name'])
                 result = e.tag
                 typename = e.attrib.get('type')
-                message = e.attrib.get('message')
-                tc.seed(result, typename, message, e.text or None)
+
+                # reuse old if empty
+                message = e.attrib.get('message') or message
+                text = e.text or text
+
+                tc.seed(result, typename, message, text)
                 tc.time = to_timedelta(el.attrib.get('time'))
-                ts.addTest(tc)
-                restags = True
             if e.tag == 'system-out':
                 tc.stdout = e.text.strip()
             if e.tag == 'system-err':
                 tc.stderr = e.text.strip()
-        if not restags:
-            ts.addTest(tc)
+
+        # add either the original "success" tc or a tc created by elements
+        ts.addTest(tc)
 
     def parse_properties(self, el, ts):
         for e in el:

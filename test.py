@@ -1,6 +1,7 @@
 #!/usr/bin/env python
-from xunitparser import parse
 from unittest import TestCase
+
+from xunitparser import parse
 
 
 class X(object):
@@ -41,7 +42,8 @@ class X(object):
         assert len(list(hash(t) for t in self.ts)) == len(set(hash(t) for t in self.ts))
 
     def test_testresult(self):
-        assert len(self.tr.failures)
+        if self.FILENAME != 'test5.xml':
+            assert len(self.tr.failures)
         for f in self.tr.failures:
             if 'pastebin.test.PastebinTest' in repr(f[0]):
                 assert 'backend.pastebin_loggedin' in f[1]
@@ -93,3 +95,7 @@ class Test4(X, TestCase):
 
     def test_testsuite_package_has_been_parsed(self):
         assert self.ts.package == 'testdb'
+
+
+class Test5(X, TestCase):
+    FILENAME = 'test5.xml'
