@@ -120,6 +120,8 @@ class TestSuite(unittest.TestSuite):
     def __init__(self, *args, **kwargs):
         super(TestSuite, self).__init__(*args, **kwargs)
         self.properties = {}
+        self.stdout = None
+        self.stderr = None
 
 
 class Parser(object):
@@ -165,6 +167,10 @@ class Parser(object):
                 self.parse_testcase(el, ts)
             if el.tag == 'properties':
                 self.parse_properties(el, ts)
+            if el.tag == 'system-out':
+                ts.stdout = el.text.strip()
+            if el.tag == 'system-err':
+                ts.stderr = el.text.strip()
 
     def parse_testcase(self, el, ts):
         tc = self.TC_CLASS(el.attrib['classname'], el.attrib['name'])

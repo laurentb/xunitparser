@@ -18,11 +18,17 @@ the output of the testcase
 </testcase>
 <testcase classname="testdb.directory" name="003-passed-test" time="10">
 <system-out>
-I am system output
+I am testcase system output
 </system-out>
 <system-err>
-I am the error output
+I am the testcase error output
 </system-err>
 </testcase>
+<system-out>
+I am testsuite system output
+</system-out>
+<system-err>
+I am the testsuite error output
+</system-err>
 </testsuite>
 </testsuites>

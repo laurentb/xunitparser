@@ -32,10 +32,12 @@ class X(object):
                     assert 'backend.pastebin_loggedin' in test.alltext
                     assert 'python2.7' in test.alltext
             if test.methodname == '003-passed-test':
-                assert "system output" in test.stdall
-                assert "error output" in test.stdall
-                assert "system output" in test.stdout
-                assert "error output" in test.stderr
+                assert "testcase system output" in test.stdall
+                assert "testcase error output" in test.stdall
+                assert "testcase system output" in test.stdout
+                assert "testcase error output" in test.stderr
+                assert "testsuite system output" in self.ts.stdout
+                assert "testsuite error output" in self.ts.stderr
 
     def test_hashes(self):
         """ assert hashes are unique """
