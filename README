@@ -41,11 +41,14 @@ a good reference of what you can do with ``xunitparser``.
 __ http://docs.python.org/library/unittest.html
 
 
-Limitations
------------
+Changes
+-------
 
-The handling of results with multiple ``testsuite`` tags
-in a ``testsuites`` tag could be better (samples needed).
++ 1.3.0
+
+  - Multiple results in a single TestCase are seen as one.
+    The previous way was never validated by real-life examples.
+  - Handle system-out / system-err at the testsuite level
 
 
 Development
