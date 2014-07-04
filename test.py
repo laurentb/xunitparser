@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 from unittest import TestCase
 
 from xunitparser import parse
