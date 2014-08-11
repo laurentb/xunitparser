@@ -173,11 +173,7 @@ class Parser(object):
                 ts.stderr = el.text.strip()
 
     def parse_testcase(self, el, ts):
-        tc_classname = None
-        if el.attrib['classname']:
-            tc_classname = el.attrib['classname']
-        else:
-            tc_classname = ts.name
+        tc_classname = el.attrib.get('classname') or ts.name
         tc = self.TC_CLASS(tc_classname, el.attrib['name'])
         tc.seed('success', trace=el.text or None)
         tc.time = to_timedelta(el.attrib.get('time'))

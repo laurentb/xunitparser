@@ -1,5 +1,5 @@
-<testsuite errors="0" failures="2" name="" tests="3">
-<testcase classname="aaa.dd" name="test_CheckType" />
+<testsuite errors="0" failures="2" name="bla" tests="3">
+<testcase name="test_CheckType" />
 <testcase classname="aaa.cc" name="test_CheckOther"><failure></failure></testcase>
 <testcase classname="aaa.bbb.ccc" name="test_Data" >
 <failure type="AssertionError">Traceback (most recent call last):

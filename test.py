@@ -84,6 +84,10 @@ class Test3(X, TestCase):
                 assert 'None' not in f[1]
                 assert f[0].message is None
 
+    def test_className(self):
+        for test in self.ts:
+            assert test.classname
+
 
 class Test4(X, TestCase):
     FILENAME = 'test4.xml'
