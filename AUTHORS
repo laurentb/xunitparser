@@ -10,6 +10,9 @@ Nicolas Léveillé <nicolas@uucidl.com>
 Damien Nozay <damien.nozay@gmail.com>
     * Added support for system-out / system-err at the testsuite level
 
+Josh Goodson <joshua.goodson@webfilings.com>
+    * Added support of tests without classnames
+
 Thanks to:
 
 Larry Cai <larry.caiyu@gmail.com>
