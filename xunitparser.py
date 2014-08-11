@@ -173,7 +173,12 @@ class Parser(object):
                 ts.stderr = el.text.strip()
 
     def parse_testcase(self, el, ts):
-        tc = self.TC_CLASS(el.attrib['classname'], el.attrib['name'])
+        tc_classname = None
+        if el.attrib['classname']:
+            tc_classname = el.attrib['classname']
+        else:
+            tc_classname = ts.name
+        tc = self.TC_CLASS(tc_classname, el.attrib['name'])
         tc.seed('success', trace=el.text or None)
         tc.time = to_timedelta(el.attrib.get('time'))
         message = None
@@ -181,7 +186,7 @@ class Parser(object):
         for e in el:
             # error takes over failure in JUnit 4
             if e.tag in ('failure', 'error', 'skipped'):
-                tc = self.TC_CLASS(el.attrib['classname'], el.attrib['name'])
+                tc = self.TC_CLASS(tc_classname, el.attrib['name'])
                 result = e.tag
                 typename = e.attrib.get('type')
 
