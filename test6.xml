@@ -1,0 +1,1 @@
+<testsuite errors='0' failures='0' name='com.github.review.CommentSourceTest' tests='2' time='0' ><testcase name="testCommentsSourcesToggleIncludeEditorComments" time="16"/><testcase name="testCommentSourcesLoad" time="2"/></testsuite>

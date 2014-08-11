@@ -43,11 +43,15 @@ class X(object):
         assert len(list(hash(t) for t in self.ts)) == len(set(hash(t) for t in self.ts))
 
     def test_testresult(self):
-        if self.FILENAME != 'test5.xml':
+        if self.FILENAME not in ('test5.xml', 'test6.xml'):
             assert len(self.tr.failures)
         for f in self.tr.failures:
             if 'pastebin.test.PastebinTest' in repr(f[0]):
                 assert 'backend.pastebin_loggedin' in f[1]
+
+    def test_classname(self):
+        for test in self.ts:
+            assert test.classname
 
 
 class Test1(X, TestCase):
@@ -84,10 +88,6 @@ class Test3(X, TestCase):
                 assert 'None' not in f[1]
                 assert f[0].message is None
 
-    def test_className(self):
-        for test in self.ts:
-            assert test.classname
-
 
 class Test4(X, TestCase):
     FILENAME = 'test4.xml'
@@ -114,3 +114,7 @@ class Test5(X, TestCase):
                 assert 'PathToMyProject' in test.trace
                 found = True
         assert found
+
+
+class Test6(X, TestCase):
+    FILENAME = 'test6.xml'
