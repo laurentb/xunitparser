@@ -167,9 +167,9 @@ class Parser(object):
                 self.parse_testcase(el, ts)
             if el.tag == 'properties':
                 self.parse_properties(el, ts)
-            if el.tag == 'system-out':
+            if el.tag == 'system-out' and el.text:
                 ts.stdout = el.text.strip()
-            if el.tag == 'system-err':
+            if el.tag == 'system-err' and el.text:
                 ts.stderr = el.text.strip()
 
     def parse_testcase(self, el, ts):
@@ -192,9 +192,9 @@ class Parser(object):
 
                 tc.seed(result, typename, message, text)
                 tc.time = to_timedelta(el.attrib.get('time'))
-            if e.tag == 'system-out':
+            if e.tag == 'system-out' and e.text:
                 tc.stdout = e.text.strip()
-            if e.tag == 'system-err':
+            if e.tag == 'system-err' and e.text:
                 tc.stderr = e.text.strip()
 
         # add either the original "success" tc or a tc created by elements

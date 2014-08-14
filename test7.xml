@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<testsuites>
+  <testsuite name="PhantomJS 1.9.7 (Linux)" package="" timestamp="2014-08-14T15:13:46" id="0" hostname="3618ebebe274" tests="269" errors="0" failures="0" time="1.728">
+    <properties>
+      <property name="browser.fullName" value="Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.7 Safari/534.34"/>
+    </properties>
+    <testcase name="exists" time="0.002" classname="PhantomJS 1.9.7 (Linux).SessionService"/>
+    <system-out><![CDATA[PhantomJS 1.9.7 (Linux) WARN: 'Deprecation warning: moment construction falls back to js Date. This is discouraged and will be removed in upcoming major release. Please refer to https://github.com/moment/moment/issues/1407 for more info.'
+,PhantomJS 1.9.7 (Linux) LOG: 'Timing for testEvent: 25ms. Params: {"name":"testName","endStuff":"thingies","updatedStuff":"asdf"}'
+,PhantomJS 1.9.7 (Linux) LOG: 'end called for testEvent with no start!'
+
+]]></system-out>
+    <system-err/>
+  </testsuite>
+</testsuites>
+
