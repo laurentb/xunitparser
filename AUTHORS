@@ -11,7 +11,7 @@ Damien Nozay <damien.nozay@gmail.com>
     * Added support for system-out / system-err at the testsuite level
 
 Josh Goodson <joshua.goodson@webfilings.com>
-    * Added support of tests without classnames
+    * Various fixes, new tests
 
 Thanks to:
 
