@@ -43,7 +43,7 @@ class X(object):
         assert len(list(hash(t) for t in self.ts)) == len(set(hash(t) for t in self.ts))
 
     def test_testresult(self):
-        if self.FILENAME not in ('test5.xml', 'test6.xml'):
+        if self.FILENAME not in ('test5.xml', 'test6.xml', 'test7.xml'):
             assert len(self.tr.failures)
         for f in self.tr.failures:
             if 'pastebin.test.PastebinTest' in repr(f[0]):
@@ -118,3 +118,7 @@ class Test5(X, TestCase):
 
 class Test6(X, TestCase):
     FILENAME = 'test6.xml'
+
+
+class Test7(X, TestCase):
+    FILENAME = 'test7.xml'
