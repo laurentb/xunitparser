@@ -1,3 +1,4 @@
+import os
 from unittest import TestCase
 
 from xunitparser import parse
@@ -5,7 +6,7 @@ from xunitparser import parse
 
 class X(object):
     def setUp(self):
-        with open(self.FILENAME) as f:
+        with open(os.path.join('tests', self.FILENAME)) as f:
             # the lib already does some sanity checks;
             # passing this is already a good test in itself
             self.ts, self.tr = parse(f)
@@ -43,8 +44,10 @@ class X(object):
         assert len(list(hash(t) for t in self.ts)) == len(set(hash(t) for t in self.ts))
 
     def test_testresult(self):
-        if self.FILENAME not in ('test5.xml', 'test6.xml', 'test7.xml'):
+        if self.FILENAME in ('test1.xml', 'test2.xml', 'test3.xml', 'test4.xml'):
             assert len(self.tr.failures)
+        else:
+            assert not len(self.tr.failures)
         for f in self.tr.failures:
             if 'pastebin.test.PastebinTest' in repr(f[0]):
                 assert 'backend.pastebin_loggedin' in f[1]
