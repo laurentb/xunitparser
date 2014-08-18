@@ -125,3 +125,10 @@ class Test6(X, TestCase):
 
 class Test7(X, TestCase):
     FILENAME = 'test7.xml'
+
+
+class Test8(X, TestCase):
+    FILENAME = 'test8.xml'
+
+    def test_bad_suite_time(self):
+        assert self.tr.time is None
