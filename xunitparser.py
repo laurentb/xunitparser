@@ -1,3 +1,4 @@
+import math
 import unittest
 from datetime import timedelta
 from xml.etree import ElementTree
@@ -6,7 +7,12 @@ from xml.etree import ElementTree
 def to_timedelta(val):
     if val is None:
         return None
-    return timedelta(seconds=float(val))
+
+    secs = float(val)
+    if math.isnan(secs):
+        return None
+
+    return timedelta(seconds=secs)
 
 
 class TestResult(unittest.TestResult):
