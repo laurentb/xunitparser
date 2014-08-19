@@ -13,6 +13,9 @@ Damien Nozay <damien.nozay@gmail.com>
 Josh Goodson <joshua.goodson@webfilings.com>
     * Various fixes, new tests
 
+Kevin Frommelt <kevin.frommelt@gmail.com>
+    * Added support for NaN
+
 Thanks to:
 
 Larry Cai <larry.caiyu@gmail.com>
