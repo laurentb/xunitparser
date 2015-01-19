@@ -169,6 +169,8 @@ class Parser(object):
         ts.name = root.attrib.get('name')
         ts.package = root.attrib.get('package')
         for el in root:
+            if el.tag == 'testsuite':
+                self.parse_testsuite(el, ts)
             if el.tag == 'testcase':
                 self.parse_testcase(el, ts)
             if el.tag == 'properties':
