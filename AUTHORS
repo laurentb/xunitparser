@@ -10,11 +10,14 @@ Nicolas Léveillé <nicolas@uucidl.com>
 Damien Nozay <damien.nozay@gmail.com>
     * Added support for system-out / system-err at the testsuite level
 
-Josh Goodson <joshua.goodson@webfilings.com>
+Josh Goodson <joshua.goodson@workiva.com>
     * Various fixes, new tests
 
 Kevin Frommelt <kevin.frommelt@gmail.com>
     * Added support for NaN
+
+Kenny Trytek <kenny.trytek@workiva.com>
+    * Added support for nested testsuite elements
 
 Thanks to:
 

@@ -1,5 +1,5 @@
 import os
-from unittest import TestCase
+from unittest import TestCase, main
 
 from xunitparser import parse
 
@@ -132,3 +132,15 @@ class Test8(X, TestCase):
 
     def test_bad_suite_time(self):
         assert self.tr.time is None
+
+
+class Test9(X, TestCase):
+    FILENAME = 'test9.xml'
+
+    def test_nested_testsuites(self):
+        self.assertIs(self.tr.testsRun, 2)
+
+
+if __name__ == '__main__':
+    import sys
+    sys.exit(main())
