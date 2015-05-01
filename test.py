@@ -1,5 +1,6 @@
 import os
 from unittest import TestCase
+from datetime import datetime
 
 from xunitparser import parse
 
@@ -104,6 +105,9 @@ class Test4(X, TestCase):
     def test_testsuite_package_has_been_parsed(self):
         assert self.ts.package == 'testdb'
 
+    def test_testsuite_timestamp_has_been_parsed(self):
+        assert self.ts.timestamp == datetime(2012, 11, 15, 1, 2, 29)
+
 
 class Test5(X, TestCase):
     FILENAME = 'test5.xml'
@@ -118,6 +122,12 @@ class Test5(X, TestCase):
                 found = True
         assert found
 
+    def test_testsuite_timestamp_has_been_parsed(self):
+        # timezone is not part of the original JUnit xsd
+        # see ISO8601_DATETIME_PATTERN type definition.
+        assert self.ts.raw_timestamp == '2014-06-23T16:15:51GMT+02:00'
+        assert self.ts.timestamp is None
+
 
 class Test6(X, TestCase):
     FILENAME = 'test6.xml'
@@ -125,6 +135,12 @@ class Test6(X, TestCase):
 
 class Test7(X, TestCase):
     FILENAME = 'test7.xml'
+
+    def test_testsuite_timestamp_has_been_parsed(self):
+        assert self.ts.timestamp == datetime(2014, 8, 14, 15, 13, 46)
+
+    def test_testsuite_hostname_has_been_parsed(self):
+        assert self.ts.hostname == '3618ebebe274'
 
 
 class Test8(X, TestCase):

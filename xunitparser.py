@@ -1,6 +1,6 @@
 import math
 import unittest
-from datetime import timedelta
+from datetime import timedelta, datetime
 from xml.etree import ElementTree
 
 
@@ -13,6 +13,21 @@ def to_timedelta(val):
         return None
 
     return timedelta(seconds=secs)
+
+
+def to_datetime(val):
+    if val is None:
+        return None
+    try:
+        # this is the ISO8601_DATETIME_PATTERN type defined in JUnit xsd.
+        return datetime.strptime(val, '%Y-%m-%dT%H:%M:%S')
+    except ValueError:
+        # This can trip on timezone information which is not part
+        # of the original type definition.
+        # Consider one of the following imports:
+        # from dateutil.parser import parse as to_datetime
+        # from django.utils.dateparser import parse_datetime as to_datetime
+        return None
 
 
 class TestResult(unittest.TestResult):
@@ -128,6 +143,10 @@ class TestSuite(unittest.TestSuite):
         self.properties = {}
         self.stdout = None
         self.stderr = None
+        # these come from the JUnit schema.
+        self.timestamp = None
+        self.raw_timestamp = None  # string, not parsed.
+        self.hostname = None
 
 
 class Parser(object):
@@ -167,7 +186,12 @@ class Parser(object):
     def parse_testsuite(self, root, ts):
         assert root.tag == 'testsuite'
         ts.name = root.attrib.get('name')
+        ts.raw_timestamp = root.attrib.get('timestamp')
+        ts.timestamp = to_datetime(root.attrib.get('timestamp'))
         ts.package = root.attrib.get('package')
+        ts.hostname = root.attrib.get('hostname')
+        ts.time = to_timedelta(root.attrib.get('time'))
+
         for el in root:
             if el.tag == 'testcase':
                 self.parse_testcase(el, ts)
