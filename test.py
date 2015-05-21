@@ -132,3 +132,15 @@ class Test8(X, TestCase):
 
     def test_bad_suite_time(self):
         assert self.tr.time is None
+
+
+class TestNamespaced(TestCase):
+
+    def setUp(self):
+        with open(os.path.join('tests', 'casperjs.xml')) as f:
+            self.ts, self.tr = parse(f)
+
+    def test_nocrash(self):
+        'We do not crash when the XML is namespaced, such as CasperJS results'
+        assert self.ts
+        assert self.tr
