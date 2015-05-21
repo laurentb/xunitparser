@@ -1,7 +1,15 @@
 import math
+import re
 import unittest
 from datetime import timedelta
 from xml.etree import ElementTree
+
+TAG_RE = re.compile(r'(?P<ns>{.*})?(?P<name>\w+)')
+
+
+def get_tagname(tag):
+    match = re.search(TAG_RE, tag)
+    return match.group('name')
 
 
 def to_timedelta(val):
@@ -142,7 +150,7 @@ class Parser(object):
 
     def parse_root(self, root):
         ts = self.TS_CLASS()
-        if root.tag == 'testsuites':
+        if get_tagname(root.tag) == 'testsuites':
             for subroot in root:
                 self.parse_testsuite(subroot, ts)
         else:
@@ -165,17 +173,18 @@ class Parser(object):
         return (ts, tr)
 
     def parse_testsuite(self, root, ts):
-        assert root.tag == 'testsuite'
+        assert get_tagname(root.tag) == 'testsuite'
         ts.name = root.attrib.get('name')
         ts.package = root.attrib.get('package')
         for el in root:
-            if el.tag == 'testcase':
+            tagname = get_tagname(el.tag)
+            if tagname == 'testcase':
                 self.parse_testcase(el, ts)
-            if el.tag == 'properties':
+            if tagname == 'properties':
                 self.parse_properties(el, ts)
-            if el.tag == 'system-out' and el.text:
+            if tagname == 'system-out' and el.text:
                 ts.stdout = el.text.strip()
-            if el.tag == 'system-err' and el.text:
+            if tagname == 'system-err' and el.text:
                 ts.stderr = el.text.strip()
 
     def parse_testcase(self, el, ts):
@@ -186,10 +195,11 @@ class Parser(object):
         message = None
         text = None
         for e in el:
+            tagname = get_tagname(e.tag)
             # error takes over failure in JUnit 4
-            if e.tag in ('failure', 'error', 'skipped'):
+            if tagname in ('failure', 'error', 'skipped'):
                 tc = self.TC_CLASS(tc_classname, el.attrib['name'])
-                result = e.tag
+                result = tagname
                 typename = e.attrib.get('type')
 
                 # reuse old if empty
@@ -198,9 +208,9 @@ class Parser(object):
 
                 tc.seed(result, typename, message, text)
                 tc.time = to_timedelta(el.attrib.get('time'))
-            if e.tag == 'system-out' and e.text:
+            if tagname == 'system-out' and e.text:
                 tc.stdout = e.text.strip()
-            if e.tag == 'system-err' and e.text:
+            if tagname == 'system-err' and e.text:
                 tc.stderr = e.text.strip()
 
         # add either the original "success" tc or a tc created by elements
@@ -208,7 +218,7 @@ class Parser(object):
 
     def parse_properties(self, el, ts):
         for e in el:
-            if e.tag == 'property':
+            if get_tagname(e.tag) == 'property':
                 assert e.attrib['name'] not in ts.properties
                 ts.properties[e.attrib['name']] = e.attrib['value']
 
