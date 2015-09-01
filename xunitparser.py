@@ -219,7 +219,7 @@ class Parser(object):
     def parse_properties(self, el, ts):
         for e in el:
             if get_tagname(e.tag) == 'property':
-                assert e.attrib['name'] not in ts.properties
+                # assert e.attrib['name'] not in ts.properties  # TODO: Care about this
                 ts.properties[e.attrib['name']] = e.attrib['value']
 
 
