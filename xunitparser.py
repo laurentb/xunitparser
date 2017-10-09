@@ -147,7 +147,8 @@ class Parser(object):
                 self.parse_testsuite(subroot, ts)
         else:
             self.parse_testsuite(root, ts)
-
+        
+        ts._cleanup=False
         tr = ts.run(self.TR_CLASS())
 
         tr.time = to_timedelta(root.attrib.get('time'))
