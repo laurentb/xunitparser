@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<testsuite errors="0" failures="0" name="pytest" skips="0" tests="1" time="0.014">
+  <testcase classname="test_fixtures.TestCustomMetadataInjection" file="test_fixtures.py" line="99" name="example" time="0.00146698951721">
+    <properties>
+      <property name="assertions" value="REQ-1234, REQ-5678, REQ-9101"/>
+    </properties>
+    <system-out>
+hello world
+</system-out>
+  </testcase>
+</testsuite>

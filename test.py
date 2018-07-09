@@ -1,7 +1,17 @@
 import os
+import pathlib
 from unittest import TestCase
+from xml.etree import ElementTree
 
-from xunitparser import parse
+try:
+    from StringIO import StringIO
+except ImportError:
+    from io import StringIO
+
+from lxml import etree
+
+from xunitparserx import parse
+import xunitparserx
 
 
 class X(object):
@@ -69,6 +79,18 @@ class Test1(X, TestCase):
     def test_numbers(self):
         assert self.tr.testsRun == 104
 
+class Test1_PLUS(X, TestCase):
+    FILENAME = 'test1.xml'
+
+    def test_from_string(self):
+        import pathlib
+        ts, tr=xunitparserx.fromstring( (pathlib.Path('tests')/self.FILENAME).read_text(encoding='utf-8'))
+        assert str(tr) == str(self.tr)
+        assert str(ts) == str(self.ts)
+        pass
+
+    pass
+
 
 class Test2(X, TestCase):
     FILENAME = 'test2.xml'
@@ -132,3 +154,66 @@ class Test8(X, TestCase):
 
     def test_bad_suite_time(self):
         assert self.tr.time is None
+
+
+class Test9(X, TestCase):
+    FILENAME = 'test9_with_record_xml_property.xml'
+
+    def test_prop_parse(self):
+        for tc in self.ts: # type: xunitparserx.XUnitParserXTestCase
+            if tc.basename == 'TestCustomMetadataInjection':
+                assert tc.props is not None
+                assert tc.props['assertions'] == 'REQ-1234, REQ-5678, REQ-9101'
+                pass
+
+        pass
+
+
+    pass
+
+class Test10(TestCase):
+    FILENAME = 'test10_trx_sample.trx'
+
+    def get_test_file_path(self):
+        return str(pathlib.Path(__file__).parent/ 'tests'/ self.FILENAME)
+
+    def test_xunitparserx_trx_to_mstest_convert(self):
+        trx_source_str=pathlib.Path(self.get_test_file_path()).read_text(encoding='utf-8')
+
+        #no throw means succ!
+        result=xunitparserx.convert_mstest_trx_to_junit(trx_source_str)
+
+        pass
+
+    def test_xunitparserx_trx_parser(self):
+        trx_source_str=pathlib.Path(self.get_test_file_path()).read_text(encoding='utf-8')
+        ts, tr=xunitparserx.fromstring_trx(trx_source_str)
+        assert ts is not None
+        assert tr is not None
+
+    pass
+
+
+class OtherTestCase(TestCase):
+    def test_xslt_api(self):
+        xslt_root = etree.XML('''\
+        <xsl:stylesheet version="1.0"
+          xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+          <xsl:template match="/">
+            <foo><xsl:value-of select="/a/b/text()" /></foo>
+          </xsl:template>
+        </xsl:stylesheet>''')
+        transform = etree.XSLT(xslt_root)
+
+        f = StringIO('<a><b>Hello World!</b></a>')
+        doc = etree.parse(f)
+        result_tree = transform(doc)
+
+        root = etree.XML('<a><b>Text</b></a>')
+        result = transform(root)
+        xml = str(result)
+
+        # not throw means succ
+        pass
+
+    pass

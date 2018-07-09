@@ -1,0 +1,16 @@
+<xs:element name="testcase">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="skipped" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="error" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="failure" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="system-out" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="system-err" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="assertions" type="xs:string" use="optional"/>
+        <xs:attribute name="time" type="xs:string" use="optional"/>
+        <xs:attribute name="classname" type="xs:string" use="optional"/>
+        <xs:attribute name="status" type="xs:string" use="optional"/>
+    </xs:complexType>
+</xs:element>

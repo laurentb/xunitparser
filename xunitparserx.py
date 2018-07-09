@@ -3,6 +3,7 @@ import unittest
 from datetime import timedelta
 from xml.etree import ElementTree
 
+from lxml import etree
 
 def to_timedelta(val):
     if val is None:
@@ -30,6 +31,7 @@ class TestCase(unittest.TestCase):
         super(TestCase, self).__init__()
         self.classname = classname
         self.methodname = methodname
+        self.props = dict()
 
     def __str__(self):
         return "%s (%s)" % (self.methodname, self.classname)
@@ -129,8 +131,8 @@ class TestSuite(unittest.TestSuite):
         self.stdout = None
         self.stderr = None
 
-
 class Parser(object):
+    #TC_CLASS = TestCase
     TC_CLASS = TestCase
     TS_CLASS = TestSuite
     TR_CLASS = TestResult
@@ -140,7 +142,19 @@ class Parser(object):
         root = xml.getroot()
         return self.parse_root(root)
 
+    def fromstring(self, source_str):
+        root=ElementTree.fromstring(source_str)
+        return self.parse_root(root)
+        pass
+
     def parse_root(self, root):
+        """
+
+        :param ElementTree.Element root: root element
+        :return:
+        :rtype: (TestSuite, TestResult)
+        """
+
         ts = self.TS_CLASS()
         if root.tag == 'testsuites':
             for subroot in root:
@@ -180,6 +194,12 @@ class Parser(object):
                 ts.stderr = el.text.strip()
 
     def parse_testcase(self, el, ts):
+        '''
+
+        :param ElementTree.Element el:
+        :param TestSuite ts:
+        :return:
+        '''
         tc_classname = el.attrib.get('classname') or ts.name
         tc = self.TC_CLASS(tc_classname, el.attrib['name'])
         tc.seed('success', trace=el.text or None)
@@ -204,6 +224,16 @@ class Parser(object):
             if e.tag == 'system-err' and e.text:
                 tc.stderr = e.text.strip()
 
+        '''
+        <properties>
+            <property name="assertions" value="REQ-1234, REQ-5678, REQ-9101"/>
+        </properties>
+        '''
+
+        for prop_ele in el.findall('properties/property'):
+            tc.props[prop_ele.attrib['name']]=prop_ele.attrib['value']
+            pass
+
         # add either the original "success" tc or a tc created by elements
         ts.addTest(tc)
 
@@ -215,4 +245,42 @@ class Parser(object):
 
 
 def parse(source):
+    """
+    parse a junit xml file
+    :param source:
+    :return:
+    :rtype: ( TestSuite, TestResult)
+    """
     return Parser().parse(source)
+
+
+def fromstring(source_str):
+    return Parser().fromstring(source_str)
+
+def convert_mstest_trx_to_junit(source_str):
+    import pathlib
+
+    trx_to_junit_xlst_path_obj=pathlib.Path(__file__).parent/'trx-to-junit.xslt' # type: pathlib.Path
+
+    xslt_root_element = etree.XML(trx_to_junit_xlst_path_obj.read_bytes())
+    xlst_engine_obj = etree.XSLT(xslt_root_element)
+
+    source_root_element = etree.XML(source_str)
+    result_root_ele = xlst_engine_obj(source_root_element)
+
+    xml = str(result_root_ele)
+
+    return xml
+    pass
+
+def parse_trx(source):
+    import pathlib
+    trx_source_str=pathlib.Path(source).read_text(encoding='utf-8')
+    return fromstring_trx(trx_source_str)
+    pass
+
+def fromstring_trx(trx_source_str):
+    source_str=convert_mstest_trx_to_junit(trx_source_str)
+    return fromstring(source_str)
+    pass
+
