@@ -1,2 +1,2 @@
-include README LICENSE AUTHORS
+include readme.rst LICENSE AUTHORS
 include test.py tests/*.xml run_tests.sh

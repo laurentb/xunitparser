@@ -5,7 +5,7 @@ from setuptools import setup
 
 setup(
     name='xunitparserx',
-    version='1.9.9',
+    version='1.9.10',
     description='Read JUnit/XUnit/MSTest XML files and map them to Python objects',
     long_description=open('readme.rst').read(),
     install_requires=[
@@ -18,7 +18,7 @@ setup(
     maintainer_email='congzhangzh@gmail.com',
     url='https://github.com/medlab/xunitparserx',
     py_modules=['xunitparserx'],
-    data_files=[('.', 'trx-to-junit.xslt')],
+    data_files=[('trx-to-junit.xslt')],
     test_suite='test',
     classifiers=[
         'License :: OSI Approved :: MIT License',
