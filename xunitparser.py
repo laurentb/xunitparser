@@ -1,7 +1,11 @@
 import math
 import unittest
 from datetime import timedelta
-from xml.etree import ElementTree
+
+try:
+    from defusedxml import ElementTree
+except ImportError:
+    from xml.etree import ElementTree
 
 
 def to_timedelta(val):
