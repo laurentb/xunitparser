@@ -3,6 +3,8 @@ import unittest
 from datetime import timedelta
 
 try:
+    # Use the safe XML parser (defusedxml) when available
+    # See https://docs.python.org/3/library/xml.etree.elementtree.html
     from defusedxml import ElementTree
 except ImportError:
     from xml.etree import ElementTree
